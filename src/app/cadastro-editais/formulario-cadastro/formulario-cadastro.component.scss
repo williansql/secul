@@ -1,0 +1,74 @@
+.bodyFormCadastroEditais {
+  display: flex;
+  flex-direction: column;
+  width: 1260px;
+
+  span {
+    width: 1220px;
+    display: flex;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+    color: #07619d;
+    padding-top: 87px;
+  }
+
+  .formCadastroEditais {
+    display: flex;
+    flex-direction: column;
+    width: 1220px;
+    padding-top: 60px;
+    gap: 30px;
+    .titulo {
+      height: 45px;
+      background: #ffffff;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+    }
+    .descreva {
+      height: 180px;
+      background: #ffffff;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+    }
+    .email {
+      height: 45px;
+      background: #ffffff;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+    }
+
+    .buttons {
+      width: 1220px;
+      display: flex;
+      .link {
+        width: 172px;
+        height: 21px;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.05em;
+        color: #ffffff;
+        background: #07619d;
+        border-radius: 5px;
+      }
+      .cadastrar {
+        width: 172px;
+        height: 21px;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.05em;
+        color: #ffffff;
+        background: #76a485;
+        border-radius: 5px;
+      }
+    }
+  }
+}
