@@ -22,30 +22,65 @@
     padding-top: 60px;
     gap: 30px;
     .titulo {
+      padding-left: 13px;
       height: 45px;
       background: #ffffff;
       border: 1px solid #cccccc;
       border-radius: 5px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #999999;
     }
     .descreva {
+      padding-left: 13px;
+      padding-top: 9.42px;
       height: 180px;
       background: #ffffff;
       border: 1px solid #cccccc;
       border-radius: 5px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #999999;
     }
     .email {
+      padding-left: 13px;
+      display: flex;
+
       height: 45px;
       background: #ffffff;
       border: 1px solid #cccccc;
       border-radius: 5px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #999999;
+    }
+
     }
 
     .buttons {
       width: 1220px;
+      padding-top: 30px;
       display: flex;
+      justify-content: end;
+      gap: 2.5rem;
+      .link:hover{
+        cursor: pointer;
+        box-shadow: none;
+        transition: 0.3s;
+      }
       .link {
-        width: 172px;
-        height: 21px;
+        width: 203px;
+        height: 45px;
+        border: none;
         font-family: "Roboto";
         font-style: normal;
         font-weight: 700;
@@ -55,10 +90,19 @@
         color: #ffffff;
         background: #07619d;
         border-radius: 5px;
+        box-shadow: 5px 5px 5px rgb(119 119 119 / 40%);
+        opacity: 100%;
+      }
+
+      .cadastrar:hover{
+        cursor: pointer;
+        box-shadow: none;
+        transition: 0.3s;
       }
       .cadastrar {
-        width: 172px;
-        height: 21px;
+        width: 145px;
+        height: 45px;
+        border: none;
         font-family: "Roboto";
         font-style: normal;
         font-weight: 700;
@@ -68,7 +112,8 @@
         color: #ffffff;
         background: #76a485;
         border-radius: 5px;
+        box-shadow: 5px 5px 5px rgb(119 119 119 / 40%);
+        opacity: 100%;
       }
-    }
   }
 }

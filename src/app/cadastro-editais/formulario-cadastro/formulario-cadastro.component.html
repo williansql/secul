@@ -1,12 +1,21 @@
 <div class="bodyFormCadastroEditais">
   <span>Cadastro de editais</span>
   <div class="formCadastroEditais">
-    <input class="titulo" type="text" />
-    <input class="descreva" type="text" />
-    <input class="email" type="text" />
+    <input class="titulo" type="text" placeholder="Título" />
+    <textarea class="descreva" type="text" placeholder="Descreva aqui o edital..."></textarea>
+    <input class="email" type="text" placeholder="E-mail para contato" />
   </div>
-  <div class="buttons">
-    <button class="link">ADICIONAR LINK +</button>
-    <button class="cadastrar">CADASTRAR</button>
-  </div>
+  <form>
+    <div class="buttons">
+      <button class="link">ADICIONAR LINK +</button>
+      <button class="cadastrar" >CADASTRAR</button>
+    </div>
+    <div
+      formArrayName="credentials" **ngFor="let cred of form.controls.credentials?.value; let i = index">
+      <ng-container>
+        <input placeholder="Nome do link" formControlName="nome do link">
+        <input placeholder="Insira aqui o link" formControlName="Insira aqui o link">
+      </ng-container>
+    </div>
+  </form>
 </div>
