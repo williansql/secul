@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { CadastroEditaisRoutingModule } from './cadastro-editais-routing.module';
 import { FormularioCadastroComponent } from './formulario-cadastro/formulario-cadastro.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -11,7 +13,8 @@ import { FormularioCadastroComponent } from './formulario-cadastro/formulario-ca
   ],
   imports: [
     CommonModule,
-    CadastroEditaisRoutingModule
+    CadastroEditaisRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class CadastroEditaisModule { }

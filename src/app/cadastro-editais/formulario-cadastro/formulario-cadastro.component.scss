@@ -27,7 +27,7 @@
       background: #ffffff;
       border: 1px solid #cccccc;
       border-radius: 5px;
-      font-family: 'Roboto';
+      font-family: "Roboto";
       font-style: normal;
       font-weight: 500;
       font-size: 16px;
@@ -41,7 +41,7 @@
       background: #ffffff;
       border: 1px solid #cccccc;
       border-radius: 5px;
-      font-family: 'Roboto';
+      font-family: "Roboto";
       font-style: normal;
       font-weight: 500;
       font-size: 16px;
@@ -56,15 +56,21 @@
       background: #ffffff;
       border: 1px solid #cccccc;
       border-radius: 5px;
-      font-family: 'Roboto';
+      font-family: "Roboto";
       font-style: normal;
       font-weight: 500;
       font-size: 16px;
       line-height: 24px;
       color: #999999;
     }
+  }
 
-    }
+  .formLinks {
+    width: 1220px;
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 30px;
+    gap: 16px;
 
     .buttons {
       width: 1220px;
@@ -72,48 +78,92 @@
       display: flex;
       justify-content: end;
       gap: 2.5rem;
-      .link:hover{
+      .addLink:hover {
         cursor: pointer;
         box-shadow: none;
         transition: 0.3s;
       }
-      .link {
-        width: 203px;
-        height: 45px;
-        border: none;
-        font-family: "Roboto";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 21px;
-        letter-spacing: 0.05em;
-        color: #ffffff;
-        background: #07619d;
-        border-radius: 5px;
-        box-shadow: 5px 5px 5px rgb(119 119 119 / 40%);
-        opacity: 100%;
-      }
+    }
+    .addLink {
+      width: 203px;
+      height: 45px;
+      border: none;
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+      background: #07619d;
+      border-radius: 5px;
+      box-shadow: 5px 5px 5px rgb(119 119 119 / 40%);
+      opacity: 100%;
+    }
 
-      .cadastrar:hover{
-        cursor: pointer;
-        box-shadow: none;
-        transition: 0.3s;
-      }
-      .cadastrar {
-        width: 145px;
+    .cadastrar:hover {
+      cursor: pointer;
+      box-shadow: none;
+      transition: 0.3s;
+    }
+    .cadastrar {
+      width: 145px;
+      height: 45px;
+      border: none;
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+      background: #76a485;
+      border-radius: 5px;
+      box-shadow: 5px 5px 5px rgb(119 119 119 / 40%);
+      opacity: 100%;
+    }
+
+    .somenteTestando {
+      width: 100%;
+      display: flex;
+      .nomeLink {
+        width: 575px;
         height: 45px;
-        border: none;
+        padding-left: 13px;
+        height: 45px;
+        background: #ffffff;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
         font-family: "Roboto";
         font-style: normal;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 21px;
-        letter-spacing: 0.05em;
-        color: #ffffff;
-        background: #76a485;
-        border-radius: 5px;
-        box-shadow: 5px 5px 5px rgb(119 119 119 / 40%);
-        opacity: 100%;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #999999;
       }
+      .coleLink {
+        width: 560px;
+        height: 45px;
+        margin-left: 30px;
+        padding-left: 13px;
+        height: 45px;
+        background: #ffffff;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #999999;
+      }
+      img {
+        width: 18px;
+        height: 20px;
+        padding-left: 17px;
+        display: flex;
+        align-self: center;
+      }
+    }
   }
 }

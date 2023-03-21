@@ -1,21 +1,49 @@
 <div class="bodyFormCadastroEditais">
   <span>Cadastro de editais</span>
+
   <div class="formCadastroEditais">
     <input class="titulo" type="text" placeholder="Título" />
-    <textarea class="descreva" type="text" placeholder="Descreva aqui o edital..."></textarea>
+    <textarea
+      class="descreva"
+      type="text"
+      placeholder="Descreva aqui o edital..."
+    ></textarea>
     <input class="email" type="text" placeholder="E-mail para contato" />
   </div>
-  <form>
-    <div class="buttons">
-      <button class="link">ADICIONAR LINK +</button>
-      <button class="cadastrar" >CADASTRAR</button>
-    </div>
-    <div
-      formArrayName="credentials" **ngFor="let cred of form.controls.credentials?.value; let i = index">
-      <ng-container>
-        <input placeholder="Nome do link" formControlName="nome do link">
-        <input placeholder="Insira aqui o link" formControlName="Insira aqui o link">
-      </ng-container>
+
+  <form [formGroup]="form">
+    <div *ngIf="form.get('visible')?.value" class="formLinks">
+      <div class="buttons">
+        <button (click)="newForm()" class="addLink">ADICIONAR LINK +</button>
+        <button class="cadastrar">CADASTRAR</button>
+      </div>
+
+      <div
+        class="somenteTestando"
+        formArrayName="somenteTestando"
+        *ngFor="
+          let newLink of form.get('somenteTestando')?.value;
+          let i = index
+        "
+      >
+        <ng-container [formGroupName]="i">
+          <input
+            class="nomeLink"
+            type="text"
+            formControlName="nomeLink"
+            placeholder="Nome do link"
+          />
+
+          <input
+            class="coleLink"
+            type="text"
+            formControlName="coleLink"
+            placeholder="Cole o link aqui..."
+          />
+
+          <img src="./assets/lixeira.svg" alt="excluir" />
+        </ng-container>
+      </div>
     </div>
   </form>
 </div>
