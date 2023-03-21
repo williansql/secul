@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormArray, FormBuilder, Validators, ValidationErrors } from '@angular/forms';
+import { FormControl, FormGroup, FormArray, FormBuilder, Validators, ValidationErrors, ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'app-formulario-cadastro',
   templateUrl: './formulario-cadastro.component.html',
-  styleUrls: ['./formulario-cadastro.component.scss']
+  styleUrls: ['./formulario-cadastro.component.scss'],
+  standalone: true,
+  imports: [
+    ReactiveFormsModule,
+  ]
 })
-export class FormularioCadastroComponent implements OnInit{
+export class CadastroEditaisComponent implements OnInit{
 
   form: FormGroup;
   // const newLink = this.form.controls.somenteTestando as FormArray;
@@ -13,8 +17,12 @@ export class FormularioCadastroComponent implements OnInit{
   constructor(private fb: FormBuilder){
     this.form = this.fb.group({
       visible: true,
-      somenteTestando: this.fb.array([]),
+      links: this.fb.array([]),
     })
+  }
+
+  get links(): FormArray{
+    return this.form.get('links') as FormArray;
   }
 
   ngOnInit(): void {
@@ -22,12 +30,16 @@ export class FormularioCadastroComponent implements OnInit{
   }
 
   newForm() {
-    const newLink = this.form.get('somenteTestando') as FormArray;
+    let newLink = this.links;
     newLink.push(this.fb.group({
       nomeLink: '',
       coleLink: '',
     }));
     console.log(this.newForm);
+  }
+
+  deleteForm() {
+
   }
 
 }

@@ -1,13 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CadastroEditaisComponent } from './formulario-cadastro/formulario-cadastro.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'cadastro-editais' },
-  {
-    path: 'cadastro-editais',
-    loadChildren: () =>
-      import('./cadastro-editais/cadastro-editais.module').then((m) => m.CadastroEditaisModule),
-  },
+  { path: '', component: CadastroEditaisComponent},
 ];
 
 @NgModule({

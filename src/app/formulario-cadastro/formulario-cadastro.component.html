@@ -12,17 +12,18 @@
   </div>
 
   <form [formGroup]="form">
-    <div *ngIf="form.get('visible')?.value" class="formLinks">
+    <div *ngIf="form.links.controls.value" class="formLinks">
+
       <div class="buttons">
         <button (click)="newForm()" class="addLink">ADICIONAR LINK +</button>
         <button class="cadastrar">CADASTRAR</button>
       </div>
 
       <div
-        class="somenteTestando"
-        formArrayName="somenteTestando"
+        class="links"
+        formArrayName="links"
         *ngFor="
-          let newLink of form.get('somenteTestando')?.value;
+          let newLink of form.links.controls.value;
           let i = index
         "
       >
