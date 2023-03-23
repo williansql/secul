@@ -1,0 +1,94 @@
+<div class="field" *ngIf="monthsMenu" (window:resize)="windowResize()">
+    <div class="calendar">
+        <div class="monthSelection">
+            <button
+                *ngFor="let month of monthsMenu"
+                (click)="changeViewDate(month.date)"
+                [ngClass]="{
+                    selected:
+                        viewDate.getMonth() == month.date.getMonth() &&
+                        viewDate.getFullYear() == month.date.getFullYear()
+                }"
+            >
+                {{ month.name }}
+            </button>
+        </div>
+        <div class="monthSelection-mobile">
+            <div class="month-year">
+                <p class="currentMonth">
+                    {{ monthsMenu[viewDate.getMonth()].name }}
+                </p>
+                <p class="currentYear">{{ viewDate.getFullYear() }}</p>
+            </div>
+            <div class="change-months">
+                <button
+                    class="changeLeft"
+                    [disabled]="viewDate.getMonth() == 0"
+                    [ngClass]="{ disabled: viewDate.getMonth() == 0 }"
+                    (click)="
+                        changeViewDate(monthsMenu[viewDate.getMonth() - 1].date)
+                    "
+                >
+                    <img src="assets/icons/arrow-left-calendar.svg" />
+                </button>
+                <button
+                    class="changeRight"
+                    [disabled]="viewDate.getMonth() == 11"
+                    [ngClass]="{ disabled: viewDate.getMonth() == 11 }"
+                    (click)="
+                        changeViewDate(monthsMenu[viewDate.getMonth() + 1].date)
+                    "
+                >
+                    <img src="assets/icons/arrow-right-calendar.svg" />
+                </button>
+            </div>
+        </div>
+        <mwl-calendar-month-view
+            (dayClicked)="selectDay($event)"
+            [viewDate]="viewDate"
+            [locale]="locale"
+            [events]="events"
+            [excludeDays]="excludeDays"
+            [cellTemplate]="customCellTemplate"
+            [refresh]="refresh"
+        >
+        </mwl-calendar-month-view>
+
+        <ng-template #customCellTemplate let-day="day" let-locale="locale">
+            <div
+                class="cal-cell-top"
+                [ngClass]="{
+                    'cal-busy':
+                        (day.events.length > 0 && day.events[0].meta.busyDay) ||
+                        pastEightHours(day),
+                    'cal-full':
+                        day.events.length > 0 && day.events[0].meta.fullDay,
+                    'cal-unavailable': dayInThePast(day)
+                }"
+            >
+                <span
+                    class="cal-day-number"
+                    [ngClass]="{
+                        'today-number':
+                            now.getDate() == day.date.getDate() &&
+                            now.getMonth() == day.date.getMonth() &&
+                            now.getFullYear() == day.date.getFullYear(),
+                        'selected-day':
+                            day.date.getDate() == selectedDay.getDate() &&
+                            day.date.getMonth() == selectedDay.getMonth() &&
+                            day.date.getFullYear() == selectedDay.getFullYear()
+                    }"
+                    >{{
+                        day.date | calendarDate : "monthViewDayNumber" : locale
+                    }}</span
+                >
+            </div>
+        </ng-template>
+    </div>
+    <app-legendas></app-legendas>
+    <app-time-selection
+        #timeSelection
+        [timeIsAvailable]="timeIsAvailable"
+        (timeRange)="setTimeRange($event)"
+    ></app-time-selection>
+</div>

@@ -1,0 +1,112 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 1rem;
+    width: 24.375rem;
+    height: 12.813rem;
+    background-color: var(--white);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
+
+    .card-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        color: var(--white);
+        font-weight: 900;
+        height: 28%;
+        font-size: 1.43rem;
+        border-radius: 4.5px;
+    }
+
+    .card-text {
+        text-align: center;
+        font-weight: 500;
+        width: 100%;
+        font-size: 0.915rem;
+    }
+
+    .card-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 41%;
+        height: 20%;
+        background-color: var(--light-grey);
+        border-radius: 5px;
+        box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.2);
+        font-size: 1.25rem;
+        cursor: pointer;
+        &:hover {
+            background-color: var(--green);
+            color: var(--white);
+
+            &:not(.active) {
+                background-color: var(--light-red);
+            }
+        }
+    }
+}
+
+p {
+    margin: 0;
+    line-height: 1.3em;
+}
+
+@media (max-width: 767.98px) {
+    .card .card-text p {
+        font-size: 0.915rem;
+    }
+    .card .card-title p {
+        font-size: 1.43rem;
+    }
+
+    .card .card-button p {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .card {
+        width: 100%;
+        height: auto;
+        justify-content: space-evenly;
+        row-gap: 0.2rem;
+        cursor: pointer;
+    }
+
+    .card .card-title {
+        text-align: start;
+        p {
+            width: 100%;
+            font-size: 3.8vw;
+        }
+    }
+
+    .card .card-title,
+    .card .card-text p {
+        color: var(--white);
+        font-size: 2.8vw;
+    }
+
+    .card .card-text {
+        text-align: start;
+    }
+
+    .card .card-button {
+        display: none;
+    }
+
+    .card-mobile-open {
+        background: var(--green);
+    }
+
+    .card-mobile-close {
+        background: var(--light-red);
+    }
+}

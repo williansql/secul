@@ -1,0 +1,100 @@
+.card {
+  width: 12.6rem;
+  height: 17.5rem;
+  background: var(--white);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem;
+  cursor: pointer;
+  transition: 0.3s;
+  justify-content: flex-start;
+  gap: 0.5rem;
+
+  &:hover{
+    transform: scale(1.1);
+    #expand-icon{
+      opacity: 1;
+    }
+  }
+
+  &__imgs {
+    width: 100%;
+    height: 65%;
+    background: var(--light-grey);
+    border-radius: 5px;
+    #expand-icon{
+      position: absolute;
+      transform: translate(10.5rem,0.4rem);
+      height: 1rem;
+      width: 1rem;
+      transition: 0.5s;
+      opacity: 0;
+    }
+
+    .msg-default{
+      display:flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      font-size: 2rem;
+      
+      gap: 1rem;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+      height: 100%;
+      color: var(--white);
+      font-weight: 600;
+    }
+    
+  }
+
+  &__text {
+    color: var(--blue);
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  &__text span:first-child {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    line-height: 1.2em;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 767.98px){
+  .card{
+    width: 9.88rem;
+    height: 11.8rem;
+  }
+
+  .card .card__text{
+    font-size: 0.75rem;
+  }
+}
+
+
+@media (max-width:575.98px){
+  
+  .card{
+    width: 9.88rem;
+    height: 11.8rem;
+  }
+
+  .card .card__imgs{
+    width: 100%;
+  }
+
+  .card .card__text{
+    font-size: 0.7rem;
+  }
+}

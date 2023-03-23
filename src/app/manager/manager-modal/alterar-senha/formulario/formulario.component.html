@@ -1,0 +1,20 @@
+<div class="bodyAlterarSenha">
+    <button class="fechar">
+        <img (click)="fecharFormModal()" src="./assets/icons/Modal/icone-fechar.svg" alt="fechar" />
+    </button>
+    <div class="headerAlterarSenha">
+        <span>ALTERAR SENHA</span>
+        <hr class="linhaHeaderAlterarSenha" />
+    </div>
+    <div class="formsAlterarSenha">
+        <input class="formsSenha" type="text" placeholder="Senha atual" />
+        <input class="formsSenha" type="text" placeholder="Nova senha" />
+        <input
+            class="formsSenha"
+            type="text"
+            placeholder="Confirme a nova senha"
+        />
+    </div>
+
+    <button class="salvarAlteracoes" (click)="openTestModal()" >SALVAR ALTERAÇÕES</button>
+</div>

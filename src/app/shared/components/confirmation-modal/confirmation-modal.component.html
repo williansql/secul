@@ -1,0 +1,28 @@
+<section class="modal">
+    <img (click)="closeModal()" src="assets/icons/close-modal.svg" />
+
+    <div class="warning">
+        <p *ngIf="isArtist; else reservation">
+            Deseja realmente
+            <strong>{{
+                actionEnum == "Confirmar" ? "confirmar" : "cancelar"
+            }}</strong>
+            o cadastro de {{ dataModal.name }}?
+        </p>
+
+        <ng-template #reservation>
+            <p>
+                Deseja realmente
+                <strong>{{
+                    actionEnum == "Confirmar" ? "confirmar" : "cancelar"
+                }}</strong>
+                o agendamento de {{ dataModal.institutionName }} e enviar um
+                e-mail de notificação?
+            </p>
+        </ng-template>
+        <div>
+            <button (click)="actionConfirm()" id="yes">SIM</button>
+            <button (click)="closeModal()" id="no">NÃO</button>
+        </div>
+    </div>
+</section>

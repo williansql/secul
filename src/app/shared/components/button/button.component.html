@@ -1,0 +1,9 @@
+<button
+    class="btn-details"
+    [ngClass]="{ green: style == 'green', red: style == 'red', disabled: style == 'disabled'}"
+    (click)="redirect()"
+    [disabled]="disabled"
+>
+    <ng-content></ng-content>
+    <img src="../../../assets/icons/arrow-right-btn.svg" />
+</button>

@@ -1,0 +1,146 @@
+<div class="content" [ngSwitch]="actualPage">
+    <div>
+        <div class="breadcrumbs">
+            <p style="font-weight: 400; cursor: pointer"><a (click)="backToMenu()">Início</a></p>
+            <img
+                src="/assets/icons/right-arrow.svg"
+                alt=""
+                style="padding-top: 0.6rem"
+            />
+            <button (click)="resetToCategories()">
+                <p [ngClass]="{ categories: actualPage != '' }">Categorias</p>
+            </button>
+            <div *ngIf="actualPage != ''" class="nextsection">
+                <img
+                    src="/assets/icons/right-arrow.svg"
+                    alt=""
+                    style="padding-top: 0.6rem"
+                />
+                <p>{{ actualPage }}</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="page" *ngIf="actualPage != ''">
+            <form [formGroup]="form">
+                <input
+                    type="text"
+                    formControlName="name"
+                    placeholder="Nome"
+                    id="nome"
+                />
+                <input
+                    type="text"
+                    formControlName="score"
+                    placeholder="Média geral"
+                    id="media"
+                />
+
+                <div class="checkboxes">
+                    <div>
+                        <input
+                            type="checkbox"
+                            formControlName="able"
+                            value="true"
+                            id="checkbox"
+                        />
+                        <label for="able">Habilitado</label>
+                    </div>
+                    <div>
+                        <input
+                            type="checkbox"
+                            formControlName="accredited"
+                            value="true"
+                            id="checkbox"
+                        />
+                        <label for="accredited">Credenciado</label>
+                    </div>
+                </div>
+            </form>
+            <div class="btn">
+                <button (click)="readForm()" [disabled]="form.invalid">
+                    Cadastrar
+                </button>
+            </div>
+        </div>
+
+        <div *ngIf="actualPage != ''">
+            <app-table
+                [pagination]="{
+                    page: 0,
+                    size: 5,
+                    offset: 0,
+                    numberOfElements: 30,
+                    numberOfPages: 5,
+                    totalNumberOfElements: 9,
+                    hasNextPage: true,
+                    firstPage: true,
+                    lastPage: false
+                }"
+            >
+                <div id="sub" subtitle>
+                    <img id="img-edit" src="assets/icons/edit.svg" />
+                    <span>editar</span>
+                    <img id="img-trash" src="assets/icons/trash.svg" />
+                    <span>excluir</span>
+                </div>
+                <thead titles>
+                    <tr>
+                        <th *ngFor="let name of titles">{{ name }}</th>
+                    </tr>
+                </thead>
+                <tbody body *ngIf="data; else noData">
+                    <tr *ngFor="let value of contentToForm; index as i">
+                        <td>5</td>
+                        <td>
+                            {{ value.name }}
+                        </td>
+                        <td>{{ value.score }}</td>
+
+                        <div class="part-table">
+                            <td>
+                                <div class="text">
+                                    <div *ngIf="value.able">Habilitado</div>
+                                    <div *ngIf="value.able && value.accredited">
+                                        e
+                                    </div>
+                                    <div *ngIf="value.accredited">
+                                        Credenciado
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <img id="edit" src="assets/icons/edit.svg" />
+                                <img
+                                    id="trash"
+                                    (click)="openModal(i, action.DELETE)"
+                                    src="assets/icons/trash.svg"
+                                />
+                            </td>
+                        </div>
+                    </tr>
+                </tbody>
+
+                <ng-template #noData>
+                    <tbody>
+                        <tr
+                            style="
+                                color: var(--grey-background);
+                                line-height: 5rem;
+                            "
+                        >
+                            Nenhuma reserva encontrada
+                        </tr>
+                    </tbody>
+                </ng-template>
+            </app-table>
+        </div>
+        <div class="cards" *ngIf="actualPage == ''">
+            <app-category-card
+                (context)="readCategories($event)"
+                *ngFor="let item of menus"
+                [content]="{ icon: item.icon, text: item.text }"
+            ></app-category-card>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    & #ig {
+        width: 2.6rem;
+    }
+    & #yt {
+        width: 3.5rem;
+    }
+}
+
+h4,
+p {
+    color: var(--blue);
+}
+
+img {
+    width: 2.5rem;
+}
+
+@media (max-width: 1399.98px) {
+}
+
+@media (max-width: 1199.98px) {
+    .content {
+        column-gap: 3rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .content {
+        height: auto;
+        row-gap: 5rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .content {
+        flex-direction: column;
+        .social {
+            #fb {
+                width: 2rem;
+            }
+            #ig {
+                width: 2rem;
+            }
+            #yt {
+                width: 2.6rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+}

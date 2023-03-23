@@ -1,0 +1,80 @@
+<div class="content">
+    <div class="description">
+        <h1>Artistas credenciados</h1>
+        <p>
+            A Fundação Parnamirim de Cultura torna público a homologação do
+            resultado final do processo de seleção da
+            <strong
+                >CHAMADA PÚBLICA PARA CREDENCIAMENTO DE APRESENTAÇÕES ARTÍSTICAS
+                PARA TÉCNICOS DA ÁREA CULTURAL DESTINADO AO FOMENTO DA CULTURA
+                NO MUNICÍPIO</strong
+            >, que ocorreu no período de Dezembro de 2021 a Janeiro de 2022. As
+            listas com os nomes dos artistas devidamente credenciados podem ser
+            conferidas em sequência:
+        </p>
+    </div>
+
+    <div class="full__table">
+        <div class="dropdown">
+            <button (click)="toggle()">
+                <span [class.selected]="true">{{
+                    optionDropDown | uppercase
+                }}</span>
+                <svg
+                    [class.rotateArrow]="!dropdownSelected"
+                    viewBox="0 0 16 9"
+                    fill="none"
+                    stroke="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M15 0.999817L8 7.99982L1 0.999817"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+                </svg>
+            </button>
+            <div
+                (click)="toggle()"
+                [ngClass]="{
+                    dropdown_content: true,
+                    visible: !dropdownSelected
+                }"
+            >
+                <a
+                    *ngFor="let relation of relations"
+                    (click)="selectOptionDropDown(relation.area)"
+                >
+                    <span>{{ relation.area }}</span>
+                    <hr />
+                </a>
+            </div>
+        </div>
+
+        <div class="table">
+            <div class="title">
+                <div id="ci">Classificação</div>
+                <div id="name">Nome</div>
+            </div>
+
+            <div class="table-artists">
+                <table>
+                    <tr
+                        *ngFor="
+                            let artist of currentOption?.artists;
+                            let i = index
+                        "
+                    >
+                        <td id="td">{{ i + 1 }}</td>
+                        <td>{{ artist.name }}</td>
+                    </tr>
+                </table>
+                <br />
+                <br />
+                <br />
+            </div>
+        </div>
+    </div>
+</div>

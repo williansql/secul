@@ -1,0 +1,62 @@
+.content {
+    height: auto;
+    padding: 75px 75px;
+
+    &__title {
+        font-size: 1.3rem;
+    }
+    h1 {
+        margin: 0;
+    }
+}
+
+p {
+    display: none;
+    color: var(--blue);
+}
+
+app-diagrama {
+    overflow: visible;
+}
+
+@media (max-width: 1399.98px) {
+    .content {
+        height: auto;
+        .parent {
+            overflow-x: auto;
+            padding: 0rem 4rem 2rem 4rem;
+        }
+    }
+}
+
+@media (max-width: 1199.98px) {
+}
+
+@media (max-width: 991.98px) {
+    .content {
+        padding-right: 0;
+        padding-left: 0;
+        h1,
+        p {
+            padding-left: min(2rem, 8vw);
+        }
+    }
+    p {
+        display: flex;
+    }
+}
+
+@media (max-width: 767.98px) {
+}
+
+@media (max-width: 575.98px) {
+    .content h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 259.98px) {
+    .content h1 {
+        font-size: 20px;
+    }
+}

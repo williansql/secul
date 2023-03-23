@@ -1,0 +1,74 @@
+.backgroundMessage {
+    position: absolute;
+    width: 28rem;
+    height: 23rem;
+    z-index: 2;
+    border-radius: 5px;
+    transform: translate(0, -100%);
+    animation: fade 0.5s linear;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#msgSucess {
+    transform: translate(6.5rem, -14rem);
+    width: 15rem;
+}
+
+#msgFailed {
+    transform: translate(3.3rem, -14rem);
+    width: 22rem;
+}
+
+#loading {
+    transform: translate(3.3rem, -14rem);
+    width: 22rem;
+}
+
+.message {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.7rem;
+    position: absolute;
+    text-align: center;
+    text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+        0px -5px 35px rgba(255, 255, 255, 0.3);
+    animation: fadeOpacity 1s linear;
+    z-index: 3;
+}
+
+@keyframes fadeOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .backgroundMessage {
+        width: 80vw;
+        height: 22.7rem;
+    }
+
+    .message {
+        font-size: min(7vw, 1.3rem);
+        left: 50%;
+        top: 100%;
+        width: 35vw;
+    }
+
+    #msgSucess,
+    #msgFailed,
+    #loading {
+        transform: translate(-49%, 0);
+    }
+}

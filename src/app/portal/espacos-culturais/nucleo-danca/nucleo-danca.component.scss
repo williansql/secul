@@ -1,0 +1,43 @@
+.content {
+    height: auto;
+}
+
+@media (max-width: 1199.98px) {
+}
+
+@media (max-width: 991.98px) {
+    .content {
+        &__title {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .content {
+        &__title {
+            font-size: 1rem;
+        }
+        &__text {
+            text-align: justify;
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .content {
+        &__title {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media (max-width: 259.98px) {
+    .content {
+        padding: 2.25rem;
+
+        &__title {
+            font-size: 0.8rem;
+        }
+    }
+}

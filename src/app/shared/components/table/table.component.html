@@ -1,0 +1,22 @@
+<div id="subtitle">
+    <ng-content select="[subtitle]"></ng-content>
+    <div id="filters">
+        <div id="filters__select">
+            <span>Mostrar</span>
+            <app-select [options]="sizes" (changes)="emitSize($event)"></app-select>
+            <span> registros</span>
+        </div>
+        <app-input-search [placeholder]="'Procurar'"></app-input-search>
+    </div>
+</div>
+
+<table>
+    <ng-content select="[titles]"></ng-content>
+    <ng-content select="[body]"></ng-content>
+</table>
+
+<div id="pagination">
+    <app-pagination
+        [pagination]="pagination"
+    ></app-pagination>
+</div> 

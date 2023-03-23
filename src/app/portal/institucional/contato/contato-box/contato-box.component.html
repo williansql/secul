@@ -1,0 +1,77 @@
+<form
+    [formGroup]="form"
+    (ngSubmit)="onSubmit()"
+    [class.formBlur]="messageBox.show"
+>
+    <section class="contact">
+        <div class="contact__content">
+            <div class="contact__content--form">
+                <!-- Name field -->
+
+                <div *ngIf="invalid('name')" class="alert alert-danger">
+                    <div *ngIf="form.controls['name'].errors?.['required']">
+                        Campo obrigatório
+                    </div>
+                </div>
+                <input
+                    type="text"
+                    placeholder="Nome*"
+                    formControlName="name"
+                    [ngClass]="{ wrong: invalid('name') }"
+                />
+
+                <!-- Email field -->
+
+                <div *ngIf="invalid('email')" class="alert alert-danger">
+                    <div *ngIf="form.controls['email'].errors?.['required']">
+                        Campo obrigatório
+                    </div>
+                    <div *ngIf="form.controls['email'].errors?.['email']">
+                        Email inválido
+                    </div>
+                </div>
+
+                <input
+                    type="email"
+                    placeholder="E-mail*"
+                    formControlName="email"
+                    [ngClass]="{ wrong: invalid('email') }"
+                />
+
+                <!-- Phone field -->
+
+                <div *ngIf="invalid('phone')" class="alert alert-danger">
+                    <div *ngIf="form.controls['phone'].errors?.['pattern']">
+                        Telefone inválido
+                    </div>
+                </div>
+
+                <input
+                    type="tel"
+                    placeholder="Telefone"
+                    formControlName="phone"
+                />
+
+                <!-- Content field -->
+
+                <div *ngIf="invalid('content')" class="alert alert-danger">
+                    <div *ngIf="form.controls['content'].errors?.['required']">
+                        Campo obrigatório
+                    </div>
+                </div>
+                <textarea
+                    name="content"
+                    cols="30"
+                    rows="10"
+                    placeholder="Em que podemos ajudar?*"
+                    formControlName="content"
+                    [ngClass]="{ wrong: invalid('content') }"
+                ></textarea>
+            </div>
+
+            <app-button>ENVIAR</app-button>
+        </div>
+    </section>
+</form>
+
+<app-message-contato [messageBox]="messageBox"></app-message-contato>

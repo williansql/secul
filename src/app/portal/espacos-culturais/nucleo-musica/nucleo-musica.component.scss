@@ -1,0 +1,45 @@
+$font-size: 1.11rem;
+
+.content {
+    height: auto;
+    &__text {
+        color: black;
+    }
+    h2 {
+        color: #07619d;
+        font-size: 1.5rem;
+        margin-bottom: 0.8%;
+    }
+}
+
+@media (max-width: 1199.98px) {
+}
+
+@media (max-width: 991.98px) {
+    .content {
+        &__title {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .content {
+        &__text {
+            text-align: justify;
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+}
+
+@media (max-width: 259.98px) {
+    .content {
+        padding: 2.25rem;
+
+        &__title {
+            font-size: 0.8rem;
+        }
+    }
+}

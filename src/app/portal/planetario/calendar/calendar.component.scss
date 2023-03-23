@@ -1,0 +1,276 @@
+.field {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.calendar {
+    display: flex;
+    border-radius: 16px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+    border: 0;
+    overflow: hidden;
+    flex-grow: 1;
+
+    .monthSelection-mobile {
+        display: none;
+        justify-content: space-between;
+        margin: 1rem 5%;
+
+        .month-year {
+            display: flex;
+            flex-direction: column;
+            color: var(--blue);
+            .currentMonth {
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin: 0;
+            }
+            .currentYear {
+                font-size: 1rem;
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+
+        .change-months {
+            display: flex;
+            align-items: center;
+            column-gap: 0.5rem;
+            button {
+                border: none;
+                background-color: var(--blue);
+                border-radius: 100vh;
+                height: 2.25rem;
+                width: 2.25rem;
+                text-align: center;
+                img {
+                    width: 50%;
+                }
+            }
+            .changeLeft {
+                padding: 0.5rem 0.5rem 0.5rem 0.3rem;
+            }
+            .changeRight {
+                padding: 0.5rem 0.3rem 0.5rem 0.5rem;
+            }
+            .disabled {
+                background-color: var(--grey-background);
+            }
+        }
+    }
+
+    .monthSelection {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        gap: 0.1875rem;
+
+        button {
+            flex-grow: 1;
+            border: 0;
+            font-size: 22px;
+            padding-left: 26px;
+            line-height: 41px;
+            font-weight: 600;
+            color: var(--blue);
+            background: rgba(231, 245, 254, 0.75);
+            text-align: left;
+            cursor: pointer;
+            &:hover {
+                @extend .selected;
+            }
+        }
+    }
+    mwl-calendar-month-view {
+        flex-grow: 5;
+    }
+}
+
+.selected {
+    background: var(--white) !important;
+}
+//  ANGULAR-CALENDAR
+:host ::ng-deep mwl-calendar-month-view {
+    .cal-month-view {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .cal-header .cal-cell {
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+            color: var(--blue);
+            text-transform: capitalize;
+            justify-content: center;
+        }
+
+        .cal-cell-top {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 5.5rem;
+        }
+
+        .cal-day-badge {
+            display: none;
+        }
+
+        .cal-day-number {
+            margin: 0;
+            font-size: 1.75rem;
+            font-weight: 900;
+            color: var(--blue);
+            opacity: 1;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+        }
+
+        .cal-days {
+            border: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            .cal-cell-row {
+                border: 0;
+                height: 100%;
+            }
+            div {
+                flex-grow: 1;
+            }
+            &:last-child {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        .cal-header {
+            height: 4rem;
+            align-items: center;
+        }
+
+        .cal-day-cell {
+            min-height: 80px;
+            &:not(:last-child) {
+                border-right: 4px solid #f5f5f5;
+            }
+        }
+
+        .cal-cell-row {
+            &:hover,
+            .cal-cell:hover {
+                background-color: white;
+            }
+        }
+        .cal-day-cell.cal-out-month .cal-day-number {
+            opacity: 1;
+            color: #a3a3a3;
+            cursor: pointer;
+        }
+
+        .cal-day-cell.cal-today {
+            background-color: var(--white);
+
+            .cal-day-number {
+                font-size: 1.75rem;
+                border: 0.25rem solid var(--blue);
+            }
+        }
+
+        .cal-busy span {
+            background-color: #feaa00;
+            color: var(--white);
+        }
+
+        .cal-full span {
+            background-color: var(--red);
+            color: var(--white);
+        }
+
+        .cal-unavailable span{
+            color: #a3a3a3;
+            cursor: default !important;
+        }
+    }
+
+    .selected-day {
+        background-color: var(--light-grey) !important;
+        color: var(--blue) !important;
+    }
+}
+
+app-legendas {
+    display: none;
+}
+
+@media (max-width: 1199.98px) {
+    .calendar {
+        .monthSelection {
+            button {
+                font-size: 1.25rem;
+                padding-left: 0.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .calendar {
+        flex-direction: column;
+        .monthSelection {
+            display: none;
+        }
+        .monthSelection-mobile {
+            display: flex;
+        }
+    }
+    :host ::ng-deep mwl-calendar-month-view {
+        .cal-month-view {
+            .cal-header .cal-cell {
+                font-size: 1.25rem;
+            }
+            .cal-cell-top {
+                min-height: auto;
+                line-height: 1em;
+            }
+            .cal-day-number {
+                font-size: 1.5rem;
+            }
+            .cal-day-cell.cal-today {
+                .cal-day-number {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    .field {
+        flex-direction: column;
+        width: calc(100vw - 4rem);
+    }
+    app-legendas {
+        display: block;
+    }
+}
+
+@media (max-width: 767.98px) {
+}
+
+@media (max-width: 575.98px) {
+    :host ::ng-deep mwl-calendar-month-view {
+        .cal-month-view {
+            .cal-day-number {
+                width: 3rem;
+                height: 3rem;
+            }
+            .cal-day-cell {
+                min-height: 4rem;
+            }
+        }
+    }
+}

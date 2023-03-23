@@ -1,0 +1,38 @@
+<div class="content notices">
+    <div class="notices-content">
+        <h1>EDITAIS ABERTOS</h1>
+
+        <div class="notice-card">
+            <ng-container *ngIf="notices!.length > 0; else loading">
+                <app-card-editais
+                    *ngFor="let notice of noticesOpen"
+                    [noticeC]="notice"
+                ></app-card-editais>
+            </ng-container>
+        </div>
+    </div>
+
+    <div class="notices-content">
+        <h1>EDITAIS FECHADOS</h1>
+
+        <div class="notice-card">
+            <ng-container *ngIf="notices.length > 0; else loading">
+                <app-card-editais
+                    *ngFor="let notice of noticesClose"
+                    [noticeC]="notice"
+                ></app-card-editais>
+            </ng-container>
+        </div>
+    </div>
+
+    <ng-template #loading>
+        <ngx-skeleton-loader
+            id="skeleton-closeNotices"
+            count="8"
+            [theme]="{
+                'width.rem': 24.375,
+                'height.rem': 12.813
+            }"
+        ></ngx-skeleton-loader>
+    </ng-template>
+</div>

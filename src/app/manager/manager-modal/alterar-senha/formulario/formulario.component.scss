@@ -1,0 +1,93 @@
+.bodyAlterarSenha{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 40.5rem;
+    height: 25.25rem;
+    border-radius: .7131rem;
+    box-shadow: 0px 0px 1.3rem rgb(119 119 119 / 20%);
+    gap: 0.6em;
+
+  .fechar{
+    border: none;
+    background: none;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 1.2rem;
+    padding-right: 1.2rem;
+    img{
+      width: 1.3rem;
+      height: 1.3rem;
+    }
+  }
+  .fechar img:hover{
+    cursor: pointer;
+  }
+
+
+
+
+  .headerAlterarSenha{
+    width: 37.125rem;
+    padding-left: 2.6875rem;
+    span{
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.3rem;
+      line-height: 1.5rem;
+      color: #07619D;
+    }
+    hr{
+      border: .1427rem solid #07619D;
+    }
+  }
+
+  .formsAlterarSenha{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 37.125rem;
+    padding-left: 2.6875rem;
+    padding-top: .625rem;
+    .formsSenha{
+      height: 3.21rem;
+      background: #FFFFFF;
+      border: .0713rem solid #CCCCCC;
+      border-radius: .2853rem;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.1412rem;
+      line-height: 1.6875rem;
+      color: #999999;
+      padding-left: 1.4013rem;
+    }
+  }
+
+  .salvarAlteracoes{
+    width: 16.6875rem;
+    height: 3rem;
+    background: #76a485;
+    border-radius: .3566rem;
+    border: none;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.2338rem;
+    line-height: 1.4375rem;
+    letter-spacing: 0.05em;
+    color: white;
+    margin-left: 2.6875rem;
+    margin-top: .625rem;
+    box-shadow: .3125rem .3125rem .3125rem rgb(119 119 119 / 40%);
+    opacity: 100%;
+    }
+
+    .salvarAlteracoes:hover{
+      cursor: pointer;
+      opacity: 90%;
+      transition: 0.3s;
+      box-shadow: 0px 0px 0px rgb(119 119 119 / 40%);
+    }
+}

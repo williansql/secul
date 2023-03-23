@@ -1,0 +1,63 @@
+<div class="content">
+    <div
+        class="content__title"
+        [ngStyle]="{ display: other ? 'none' : 'block' }"
+        *ngIf="currentEvent.title; else loadingTitle"
+    >
+        <h1 class="title-events-page">
+            {{ currentEvent.title }}
+        </h1>
+    </div>
+
+    <ng-template #loadingTitle>
+        <ngx-skeleton-loader
+            count="1"
+            appearance="line"
+            [theme]="{
+                'height.rem': 2,
+                'width.rem': 25,
+                'margin-block.rem': 3
+            }"
+        ></ngx-skeleton-loader>
+    </ng-template>
+
+    <div
+        class="content__text"
+        [ngStyle]="{ display: other ? 'none' : 'block' }"
+        *ngIf="currentEvent.desc; else loadingDesc"
+    >
+        <p [innerHTML]="currentEvent.desc"></p>
+    </div>
+
+    <ng-template #loadingDesc>
+        <ngx-skeleton-loader count="4" appearance="line"></ngx-skeleton-loader>
+    </ng-template>
+
+    <div
+        class="content__title"
+        [ngStyle]="{ display: other ? 'none' : 'block' }"
+        *ngIf="currentEvent.title; else loadingTitle"
+    >
+        <h1>Galeria</h1>
+    </div>
+    <div class="content__galleries">
+        <ng-container *ngIf="currentEvent.title; else loading">
+            <app-card-gallery
+                *ngFor="let gallery of currentEvent.galleries"
+                [info]="gallery"
+            ></app-card-gallery>
+        </ng-container>
+
+        <ng-template #loading>
+            <ngx-skeleton-loader
+                id="skeleton-galleries"
+                count="6"
+                [theme]="{
+                    'width.rem': 13.6,
+                    'height.rem': 16,
+                    'margin-bottom.rem': 2
+                }"
+            ></ngx-skeleton-loader>
+        </ng-template>
+    </div>
+</div>

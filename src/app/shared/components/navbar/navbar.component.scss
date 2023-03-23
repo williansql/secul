@@ -1,0 +1,495 @@
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--nav-height);
+
+    display: none;
+    z-index: 99;
+
+    & a {
+        text-decoration: none;
+    }
+
+    & li:hover {
+        cursor: pointer;
+    }
+}
+
+.show {
+    display: flex;
+}
+
+span,
+img {
+    cursor: pointer;
+}
+
+app-sidebar {
+    display: none;
+}
+
+#word-break {
+    width: 9rem;
+}
+
+#title-mobile {
+    display: none;
+}
+
+#arrow-editais {
+    opacity: 0%;
+}
+
+.li-inicio {
+    display: none !important;
+}
+
+.navbar {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0rem 5rem;
+    display: flex;
+
+    .pulse {
+        padding: 0.3rem 0.7rem;
+        background: var(--yellow);
+        border-radius: 0.5rem;
+        line-height: 0;
+        box-shadow: 0 0 0 rgba(204, 169, 44, 0.7);
+        animation: my_pulse 1s infinite;
+
+        span {
+            font-size: 13px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--blue);
+        }
+    }
+
+    .pulse:hover {
+        animation: none;
+    }
+
+    
+}
+
+.navbarGerenciador {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 5rem;
+
+    #logo-funpac img {
+        height: 2.6rem;
+    }
+
+    .menu-gerenciador {
+        width: 70%;
+        display: flex;
+        justify-content: end;
+        gap: 4rem;
+
+        .usuario {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            img {
+                width: 17.89px;
+                height: 23px;
+            }
+            span {
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 19px;
+                letter-spacing: 0.05em;
+                color: var(--blue);
+            }
+        }
+        .alterar-Senha {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            img {
+                width: 23px;
+                height: 23px;
+            }
+            span {
+                font-family: "Roboto";
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 21px;
+                letter-spacing: 0.05em;
+                color: var(--blue);
+            }
+        }
+        .sair {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            img {
+                width: 25.08px;
+                height: 22.49px;
+            }
+            span {
+                font-family: "Roboto";
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 21px;
+                letter-spacing: 0.05em;
+                color: var(--blue);
+            }
+        }
+    }
+}
+
+#logo-funpac {
+    & button span {
+        font-size: min(1.35rem, 4.5vw);
+    }
+
+    & img {
+        margin: 0;
+        height: 60%;
+        width: auto;
+        vertical-align: middle;
+    }
+}
+
+button {
+    height: 100%;
+    background-color: inherit;
+    border: none;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+
+    & li {
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        & svg {
+            vertical-align: middle;
+            margin: 5px;
+            width: 10px;
+        }
+    }
+
+    li:first-child {
+        & img {
+            margin: 0;
+            height: 75%;
+            width: auto;
+            vertical-align: middle;
+        }
+    }
+}
+
+.dropdown {
+    height: 100%;
+    position: absolute;
+}
+
+.dropdown_content {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 0.8rem;
+    transform: translate(0px, 68px);
+
+    & a {
+        width: stretch;
+        padding: 0.5rem 1rem;
+        text-align: left;
+
+        &:last-child {
+            border-radius: 0 0 5px 5px;
+        }
+    }
+
+    & hr {
+        margin: 0 auto;
+        width: 80%;
+    }
+}
+
+.light_colors {
+    animation: fadeoutdark 0.3s forwards;
+    background-color: var(--white);
+
+    .dropdown_content {
+        background-color: var(--white);
+    }
+
+    & hr {
+        height: 1px;
+        background-color: var(--yellow);
+        border: none;
+    }
+
+    & a {
+        color: var(--blue);
+        background-color: var(--white);
+
+        &:hover {
+            background-color: var(--light-grey);
+        }
+    }
+
+    & button {
+        color: var(--blue);
+        & span {
+            border-color: var(--yellow);
+        }
+    }
+
+    & nav {
+        background-color: var(--white);
+    }
+}
+
+.dark_colors {
+    animation: fadeindark 0.3s forwards;
+    background-color: var(--blue);
+
+    .dropdown_content {
+        background-color: var(--blue);
+    }
+
+    & hr {
+        height: 1px;
+        background-color: var(--dark-blue);
+        border: none;
+    }
+
+    & a {
+        color: var(--white);
+        background-color: var(--blue);
+
+        &:hover {
+            background-color: var(--dark-blue);
+        }
+    }
+
+    & button {
+        color: var(--white);
+        & span {
+            border-color: var(--blue);
+        }
+    }
+
+    & nav {
+        background-color: var(--blue);
+    }
+}
+
+.shadow {
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.visible {
+    visibility: visible;
+}
+
+.selected,
+button > span:hover {
+    padding-bottom: 0.1rem;
+}
+
+#title-desktop {
+    border: 0;
+}
+
+#btn-eventos {
+    margin-left: 1rem;
+}
+
+#li-credenciados {
+    margin-left: 1.5rem;
+}
+
+@mixin slideIn($to: 18rem) {
+    position: relative;
+    animation: slideIn forwards 500ms;
+    @keyframes slideIn {
+        from {
+            right: -3rem;
+        }
+        to {
+            right: $to;
+        }
+    }
+}
+
+@mixin slideOut($from: 18rem) {
+    position: relative;
+    animation: slideOut forwards 500ms cubic-bezier(0.58, -0.33, 0.25, 1);
+    @keyframes slideOut {
+        from {
+            right: $from;
+        }
+        to {
+            right: -3rem;
+        }
+    }
+}
+
+.showSidebar {
+    @include slideIn();
+}
+
+.hideSidebar {
+    @include slideOut();
+}
+
+@media (max-width: 991.98px) {
+    .navbar {
+        padding: 16px min(2rem, 8vw);
+        align-items: center;
+    }
+
+    app-sidebar {
+        display: block;
+    }
+
+    #btn-mobile button svg {
+        color: var(--white);
+    }
+
+    #logo-funpac button img {
+        display: none;
+    }
+
+    #btn-mobile {
+        display: block;
+        justify-content: end;
+        padding-top: 0.2rem;
+        cursor: pointer;
+    }
+
+    #btn-eventos {
+        margin-left: 0;
+    }
+
+    #li-credenciados {
+        margin-left: 12%;
+    }
+
+    .light_colors {
+        animation: fadeoutdark 0.3s forwards;
+
+        #title-desktop {
+            color: var(--blue);
+        }
+
+        #title-mobile {
+            display: flex;
+            color: var(--blue);
+            border: none;
+        }
+
+        .dropdown_content {
+            background-color: #06467158;
+        }
+
+        .hide {
+            color: var(--white) !important;
+        }
+
+        & hr {
+            height: 1px;
+            background-color: var(--dark-blue);
+            border: none;
+        }
+
+        #btn-mobile button svg {
+            color: var(--blue);
+        }
+    }
+
+    ul {
+        display: none;
+    }
+
+    .dropdown {
+        height: fit-content;
+        position: relative;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .showSidebar {
+        @include slideIn(13rem);
+    }
+
+    .hideSidebar {
+        @include slideOut(13rem);
+    }
+}
+
+@media (max-width: 259.98px) {
+    .showSidebar {
+        @include slideIn(70vw);
+    }
+
+    .hideSidebar {
+        @include slideOut(70vw);
+    }
+}
+
+@keyframes fadeindark {
+    from {
+        background-color: var(--white);
+    }
+    to {
+        background-color: var(--blue);
+    }
+}
+
+@keyframes fadeoutdark {
+    from {
+        background-color: var(--blue);
+    }
+    to {
+        background-color: var(--white);
+    }
+}
+
+@keyframes turnArrow {
+    0% {
+        transform: rotate(-90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes my_pulse {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.7);
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    }
+}

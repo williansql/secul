@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="splash">
+        <div class="logo">
+            <img src="assets/icons/semuc-logo-sticker.svg" alt="" />
+        </div>
+        <div class="images">
+            <app-polaroid
+                [ngStyle]="{ transform: 'rotate(-8deg)' }"
+                imgUrl="assets/images/image-01.png"
+            ></app-polaroid>
+            <app-polaroid
+                [ngStyle]="{ transform: 'rotate(7.4deg)' }"
+                imgUrl="assets/images/image-02.png"
+            ></app-polaroid>
+            <app-polaroid
+                [ngStyle]="{ transform: 'rotate(-8.07deg)' }"
+                imgUrl="assets/images/image-03.png"
+            ></app-polaroid>
+            <app-polaroid
+                [ngStyle]="{ transform: 'rotate(7deg)' }"
+                imgUrl="assets/images/image-04.png"
+            ></app-polaroid>
+        </div>
+    </div>
+    <app-recentes></app-recentes>
+</div>

@@ -1,0 +1,8 @@
+<div class="separator">
+<div *ngFor="let item of legendas">
+    <div class="body" [ngStyle]="{backgroundColor: item.backgroundColor}">
+        <div class="circle" [ngStyle]="{backgroundColor: item.circleColor}"></div>
+        <p>{{ item.title }}</p>
+    </div>
+</div>
+</div>

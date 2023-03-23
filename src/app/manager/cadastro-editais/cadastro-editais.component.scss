@@ -1,0 +1,192 @@
+.bodyFormEditais {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 87px;
+    p {
+        padding-top: 20px;
+        align-self: flex-start;
+    }
+    .container {
+        width: 1200px;
+        display: flex;
+        flex-direction: column;
+        .tituloEditais {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 100%;
+            color: #07619d;
+        }
+        form {
+            .groupForm {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                padding-top: 60px;
+                .titulo {
+                    height: 45px;
+                    background: #ffffff;
+                    border: 1px solid #cccccc;
+                    border-radius: 5px;
+                    font-family: "Roboto";
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #999999;
+                    padding-left: 13px;
+                }
+                .descreva {
+                    height: 180px;
+                    background: #ffffff;
+                    border: 1px solid #cccccc;
+                    border-radius: 5px;
+                    font-family: "Roboto";
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #999999;
+                    padding-left: 13px;
+                    padding-top: 13px;
+                }
+                .email {
+                    height: 45px;
+                    background: #ffffff;
+                    border: 1px solid #cccccc;
+                    border-radius: 5px;
+                    font-family: "Roboto";
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #999999;
+                    padding-left: 13px;
+                }
+                .styleLinks{
+                    display: flex;
+                    // justify-content: space-between;
+                    .nameLink {
+                    width: 575px;
+                    height: 45px;
+                    background: #ffffff;
+                    border: 1px solid #cccccc;
+                    border-radius: 5px;
+                    font-family: "Roboto";
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #999999;
+                    padding-left: 13px;
+                }
+                .pasteLink {
+                    width: 568px;
+                    height: 45px;
+                    background: #ffffff;
+                    border: 1px solid #cccccc;
+                    border-radius: 5px;
+                    font-family: "Roboto";
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #999999;
+                    padding-left: 13px;
+                    margin-left: 20px;
+                }
+                }
+            }
+
+            .buttons {
+                padding-top: 32px;
+                display: flex;
+                justify-content: flex-end;
+                gap: 30px;
+
+                .creatLinks:hover {
+                    cursor: pointer;
+                }
+                .creatLinks {
+                    width: 203px;
+                    height: 45px;
+                    background: #07619d;
+                    border-radius: 5px;
+                    border: none;
+                    font-family: "Roboto";
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 21px;
+                    letter-spacing: 0.05em;
+                    color: #ffffff;
+                }
+
+                .submit:disabled{
+                    opacity: 40%;
+                }
+                .submit:hover {
+                    cursor: pointer;
+                }
+                .submit {
+                    width: 145px;
+                    height: 45px;
+                    background: #76a485;
+                    border-radius: 5px;
+                    border: none;
+                    font-family: "Roboto";
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 21px;
+                    letter-spacing: 0.05em;
+                    color: #ffffff;
+                }
+            }
+            .formArray {
+                padding-top: 16px;
+                display: flex;
+                justify-content: space-between;
+                .nameLink {
+                    width: 575px;
+                    height: 45px;
+                    background: #ffffff;
+                    border: 1px solid #cccccc;
+                    border-radius: 5px;
+                    font-family: "Roboto";
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #999999;
+                    padding-left: 13px;
+                }
+                .pasteLink {
+                    width: 568px;
+                    height: 45px;
+                    background: #ffffff;
+                    border: 1px solid #cccccc;
+                    border-radius: 5px;
+                    font-family: "Roboto";
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #999999;
+                    padding-left: 13px;
+                }
+
+                img:hover {
+                    cursor: pointer;
+                }
+                img {
+                    width: 18px;
+                    height: 20px;
+                    align-self: center;
+                }
+            }
+        }
+    }
+}

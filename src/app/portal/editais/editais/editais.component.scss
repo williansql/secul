@@ -1,0 +1,91 @@
+.content {
+    height: auto;
+}
+
+.notices {
+    &-content {
+        h1 {
+            margin: 0;
+        }
+        .notice-card {
+            display: flex;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            margin-top: 2vh;
+            padding-bottom: 2rem;
+        }
+    }
+}
+
+ngx-skeleton-loader {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2.5rem;
+}
+
+@media (min-width: 1400px) {
+    .notices .notices-content .notice-card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1399.98px) {
+    .notices .notices-content .notice-card {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .notices .notices-content .notice-card {
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    .notices .notice-card {
+        justify-content: space-around;
+    }
+
+    ngx-skeleton-loader {
+        display: flex;
+        gap: 2.5rem;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .notices .notice-card {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767.98px) {
+}
+
+@media (max-width: 575.98px) {
+    .notices .notices-content .notice-card {
+        gap: 1rem;
+    }
+
+    .notice-card {
+        justify-content: center;
+    }
+
+    .notices-content h1 {
+        font-size: 1.3rem;
+    }
+
+    ngx-skeleton-loader {
+        row-gap: 0.5rem !important;
+        span {
+            height: 22vw !important;
+            width: 90vw !important;
+        }
+    }
+
+    app-card-editais {
+        width: 100%;
+    }
+}

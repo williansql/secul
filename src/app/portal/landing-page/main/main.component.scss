@@ -1,0 +1,226 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+app-recentes,
+.splash {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - var(--nav-height) - var(--footer-height));
+}
+
+.splash {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: url("../../../../assets/images/background.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 0 -90px;
+
+    .images {
+        display: flex;
+        max-height: 13.375rem;
+
+        app-polaroid {
+            margin: 0 -30px;
+            &:nth-child(1) {
+                margin-top: 0.5rem;
+            }
+            &:nth-child(2) {
+                z-index: 1;
+                margin-top: 1rem;
+            }
+            &:nth-child(3) {
+                margin-left: 1rem;
+            }
+            &:nth-child(4) {
+                margin-top: 0.5rem;
+                margin-left: 0.1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 1910px) {
+    app-recentes .splash {
+        height: auto;
+    }
+    .splash {
+        .logo {
+            img {
+                width: 40rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .splash {
+        display: flex;
+        row-gap: 3rem;
+        justify-content: center;
+        height: 46em;
+    }
+}
+
+@media (max-width: 991.98px) {
+    app-recentes {
+        height: auto;
+    }
+    .splash {
+        row-gap: 2rem;
+        height: 30em;
+
+        .logo {
+            img {
+                width: 31.625rem;
+            }
+        }
+
+        .images {
+            transform: scale(0.85);
+            app-polaroid {
+                &:nth-child(1) {
+                    transform: rotate(-8deg) !important;
+                }
+                &:nth-child(2) {
+                    transform: rotate(7.4deg) !important;
+                }
+                &:nth-child(3) {
+                    transform: rotate(-8.07deg) !important;
+                }
+                &:nth-child(4) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .splash {
+        .logo {
+            img {
+                width: 24.625rem;
+            }
+        }
+        .images {
+            transform: scale(0.83);
+            app-polaroid {
+                &:nth-child(1) {
+                    transform: rotate(4deg) !important;
+                }
+                &:nth-child(2) {
+                    transform: rotate(-4deg) !important;
+                }
+                &:nth-child(3),
+                &:nth-child(4) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .splash {
+        row-gap: 1rem;
+        align-items: center;
+        height: 24em;
+        .logo {
+            img {
+                width: 16.25rem;
+            }
+        }
+        .images {
+            transform: scale(0.9);
+            app-polaroid {
+                &:nth-child(1) {
+                    opacity: 0;
+                    animation: polaroid1 20s linear infinite;
+                    transform: rotate(4deg) !important;
+                    z-index: 4;
+                }
+                &:nth-child(1n + 2) {
+                    position: absolute;
+                    display: block;
+                    right: 0rem;
+                }
+                &:nth-child(2) {
+                    animation: polaroid2 20s linear infinite;
+                    z-index: 3;
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    animation: polaroid4 20s linear infinite;
+                    opacity: 0;
+                    z-index: 2;
+                }
+                &:nth-child(4) {
+                    animation: polaroid3 20s linear infinite;
+                    opacity: 0;
+                    z-index: 1;
+                }
+                @keyframes polaroid1 {
+                    0%,
+                    20%,
+                    100% {
+                        opacity: 1;
+                    }
+                    25%,
+                    95% {
+                        opacity: 0;
+                    }
+                }
+                @keyframes polaroid2 {
+                    25%,
+                    45% {
+                        opacity: 1;
+                    }
+                    50%,
+                    20% {
+                        opacity: 0;
+                    }
+                }
+                @keyframes polaroid3 {
+                    50%,
+                    70% {
+                        opacity: 1;
+                    }
+                    75%,
+                    45% {
+                        opacity: 0;
+                    }
+                }
+                @keyframes polaroid4 {
+                    75%,
+                    95% {
+                        opacity: 1;
+                    }
+                    100%,
+                    70% {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 259.98px) {
+    .splash {
+        height: 18rem;
+    }
+
+    .splash {
+        justify-content: flex-end;
+        .logo img {
+            width: 75vw;
+        }
+    }
+}

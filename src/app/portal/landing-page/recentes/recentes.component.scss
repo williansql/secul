@@ -1,0 +1,178 @@
+app-card-chamadas,
+.top {
+    display: flex;
+    align-items: flex-start;
+}
+
+.left {
+    width: 45%;
+}
+
+.right {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 5rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 75px;
+    width: 100%;
+    height: auto;
+
+    .top {
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &__separator {
+            &__title {
+                margin: 0.5rem 0;
+            }
+            &__text {
+                margin: 0;
+                color: var(--blue);
+            }
+        }
+    }
+
+    .left {
+        .bottom__chamadas {
+            margin-top: 1rem;
+        }
+    }
+
+    .bottom {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    app-card-chamadas {
+        border-bottom: 2px solid var(--blue);
+        padding: 3% 0%;
+        &:last-child {
+            border: none;
+        }
+    }
+
+    app-polaroid {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 0.5rem;
+    }
+}
+
+#mobile {
+    display: none;
+}
+
+@media (max-width: 1199.98px) {
+    .content .top .top__separator .top__separator__title {
+        width: 70vw;
+    }
+}
+
+@media (max-width: 991.98px) {
+    app-card-chamadas {
+        justify-content: space-between;
+    }
+    .content {
+        padding-top: 1rem;
+        flex-direction: column;
+        .top .top__separator {
+            width: 80%;
+            row-gap: 10rem;
+        }
+        .left {
+            width: auto;
+
+            .header {
+                width: 80%;
+            }
+        }
+        .right {
+            width: 100%;
+        }
+    }
+
+    .content {
+        padding-inline: 8vw;
+        height: fit-content;
+        padding-bottom: 0;
+    }
+
+    .button-mobile {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        margin-top: 1.5rem;
+        padding-bottom: 2rem;
+
+        #mobile {
+            display: block;
+            position: static;
+        }
+    }
+
+    .content app-card-chamadas {
+        padding-bottom: 1rem;
+    }
+
+    #desktop {
+        display: none;
+    }
+
+    .content app-polaroid {
+        display: none;
+    }
+
+    .content .bottom .bottom__chamadas {
+        width: 100%;
+    }
+
+    .content app-card-chamadas {
+        &:nth-child(1n + 2) {
+            padding-top: 1.2rem;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .content .top .top__separator .top__separator__title {
+        width: 70vw;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .content .top .top__separator .top__separator__title {
+        font-size: 1.585rem;
+    }
+    .content .bottom .bottom__chamadas {
+        width: 100%;
+    }
+    .content .top .top__separator .top__separator__title {
+        font-size: 33px;
+    }
+    .content .top .top__separator .top__separator__text {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 259.98px) {
+    .content .bottom .bottom__chamadas {
+        width: 100%;
+    }
+    .content .top .top__separator .top__separator__title {
+        font-size: 30px;
+    }
+    .content .top .top__separator .top__separator__text {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,9 @@
+<div class="content">
+    <app-category-card
+        *ngFor="let item of menus; let i = index"
+        [content]="{ icon: item.icon, text: item.text }"
+        (context)="readCategories($event)"
+        [subMenus]="item.subMenus"
+        (click)="menuSelect(i)"
+    ></app-category-card>
+</div>

@@ -1,0 +1,24 @@
+select {
+    min-width: 6rem;
+    height: 2.813rem;
+    border-radius: 0.25rem;
+    border: 0.063rem solid #cccccc;
+    color: var(--grey-tertiary);
+    font-weight: 500;
+    appearance: none;
+    background: var(--white);
+    background-image: url("../../../../assets/icons/select-icon.svg");
+    background-repeat: no-repeat, repeat;
+    background-position: right 0.9rem top 50%, 0 0;
+    background-size: 2rem auto, 100%;
+    padding-left: 0.8rem;
+    cursor: pointer;
+    &:focus-visible {
+        outline: transparent;
+    }
+}
+
+option {
+    font-size: 1rem;
+    font-weight: 500;
+}

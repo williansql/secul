@@ -1,0 +1,392 @@
+[
+    {
+      "area": "MÚSICA",
+      "artists": [
+        {
+          "name": "Zé Hilton do Acordeon",
+          "score": 8.9,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Nara Costa",
+          "score": 8.05,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Selminha Ferrari",
+          "score": 8.02,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Jarbas do Acordeon - Forró Raiz e Banda",
+          "score": 7.75,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Yrahn Barreto - Show Baile do Barreto",
+          "score": 7.55,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "TALMA&GADELHA",
+          "score": 7.37,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Trio Emboscada",
+          "score": 7.35,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Choro de Cordas",
+          "score": 7.32,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Nildinho Sanfoneiro - Toca Pé de Serra",
+          "score": 7.3,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Júnior Groovador e Banda - Baile do Groovador",
+          "score": 7.27,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Elton Lins - Forrozando",
+          "score": 7.25,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "TIQUINHA RODRIGUES - TICA",
+          "score": 7.15,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Priscila Matos - Nordeste Sangue e Coração",
+          "score": 7.12,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Priscila Matos - Homenagem a Chiquinha Gonzaga e Ernesto Nazareth",
+          "score": 7.07,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "SKARIMBÓ",
+          "score": 7,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Vagalumes do Mar - Concerto DEMO",
+          "score": 6.97,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Clara - Volte e Pegue",
+          "score": 6.92,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Nildinho Sanfoneiro - Show Quente e Arrochado",
+          "score": 6.9,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Mobydick - Poetas do Sertão",
+          "score": 6.87,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Orquestra Boca Seca",
+          "score": 6.85,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "PRETTA SOUL - Show Poder Petro",
+          "score": 6.75,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Banda Luau",
+          "score": 6.7,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "VamZ Live",
+          "score": 6.65,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Carmem Pradella - Vem Cantar Junto",
+          "score": 6.62,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Carmem Pradella - Para Pais e Filhos ",
+          "score": 6.52,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "PotiStreet Band",
+          "score": 6.42,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Breno Slick",
+          "score": 6.3,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Jamilly e a Caixinha de Música",
+          "score": 6.27,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Grupo de Metais Potiguar Jazz",
+          "score": 6.25,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "João Battista e Banda",
+          "score": 6.2,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Ferve",
+          "score": 6.15,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Duo Monte Eyre - Um tributo a MPB",
+          "score": 6.12,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Orquestra do Papão - Do Frevo a Bossa Nova",
+          "score": 6.05,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Bear Fight",
+          "score": 5.95,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Fortunato e Os Jovens de Ontem",
+          "score": 5.9,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Femme Jazz",
+          "score": 5.87,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Denni Cruz e Banda",
+          "score": 5.85,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Jane Eyre Pedro",
+          "score": 5.75,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "DINIZ K9 - Pagotrap na city (Camisa 9 do bairro)",
+          "score": 5.52,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Jxvxns",
+          "score": 5.42,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Edu Ventura Trio Stereo Ben",
+          "score": 5.4,
+          "able": true,
+          "accredited": true
+        }
+      ]
+    },
+  
+    {
+      "area": "DANÇA",
+      "artists": [
+        {
+          "name": "Cia. de Dança Xaxado - Xaxado/Coco/Carimbó ",
+          "score": 8.25,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Grupo de Dança Nova Geração - Forrobodó da Geração",
+          "score": 7.75,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Movidos Dança - Estado de Apneia",
+          "score": 7.52,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "VERSATI",
+          "score": 7.3,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Shaman Tribal Company - Híbrida",
+          "score": 7.25,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "B.Girl Dallianny",
+          "score": 6.5,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Camarão Crew - ShowCase Breaking",
+          "score": 6.25,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Camarão Crew",
+          "score": 6,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Dallianny Santos",
+          "score": 5.87,
+          "able": true,
+          "accredited": true
+        }
+      ]
+    },
+    {
+      "area": "TEATRO",
+      "artists": [
+        {
+          "name": "Palhaço Piruá - Piruá de Circo",
+          "score": 8.2,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Luís Edu Bambam/ Palhaço Bambam",
+          "score": 6.5,
+          "able": true,
+          "accredited": true
+        }
+      ]
+    },
+    {
+      "area": "ASSESSORIA DE IMPRENSA",
+      "artists": [
+        {
+          "name": "Renata Marques Pereira Ruiz",
+          "score": 5.4,
+          "able": true,
+          "accredited": true
+        },
+        {
+          "name": "Everson dos Santos de Andrade",
+          "score": 6.7,
+          "able": true,
+          "accredited": true
+        }
+      ]
+    },
+    {
+      "area": "FOTOGRAFIA",
+      "artists": [
+        {
+          "name": "Everson dos Santos de Andrade",
+          "score": 7.5,
+          "able": true,
+          "accredited": true
+        }
+      ]
+    },
+    {
+      "area": "TÉCNICO DE SOM",
+      "artists": [
+        {
+          "name": "Carlos Eduardo Fernandes Pinheiro",
+          "score": 7.6,
+          "able": true,
+          "accredited": true
+        }
+      ]
+    },
+    {
+      "area": "FILMAGEM E EDIÇÃO",
+      "artists": [
+        {
+          "name": "Diana Cristina Nogueira Campos",
+          "score": 6.5,
+          "able": true,
+          "accredited": true
+        }
+      ]
+    },
+    {
+      "area": "LOCUÇÃO",
+      "artists": [
+        {
+          "name": "Álvaro Filipe Dantas Matias",
+          "score": 5.1,
+          "able": true,
+          "accredited": true
+        }
+      ]
+    }
+  ]
+  

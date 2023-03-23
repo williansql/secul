@@ -1,0 +1,95 @@
+.contact {
+    width: fit-content;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        background: #07619d;
+        border-radius: 5px;
+        padding: 1rem 2rem 2rem 2rem;
+        width: 28rem;
+
+        input,
+        textarea {
+            border: 0;
+            background: rgba($color: #d9d9d9, $alpha: 0.1);
+            border-radius: 5px 5px 0 0;
+            height: 2rem;
+            border-bottom: 2px solid white;
+            width: 100%;
+            color: var(--white);
+            padding: 0.5rem;
+            resize: none;
+
+            &::placeholder {
+                color: white;
+            }
+        }
+
+        &--form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            & input {
+                margin: 0.5rem 0;
+            }
+
+            & textarea {
+                height: 6rem;
+                margin: 1rem 0 1.5rem 0;
+            }
+        }
+    }
+}
+
+.ng-valid[required],
+.ng-valid.required {
+    border-left: 5px solid #42a948; /* green */
+}
+
+.ng-invalid:not(form) {
+    border-left: 5px solid #a94442; /* red */
+}
+
+.alert div {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #ff4d49;
+}
+
+.wrong {
+    border-bottom: 2px #ff4d49 solid !important;
+}
+
+.formBlur {
+    filter: blur(3px);
+    animation: fadeBlur 0.5s linear;
+}
+
+@keyframes fadeBlur {
+    0% {
+        filter: blur(0);
+    }
+    100% {
+        filter: blur(2px);
+    }
+}
+
+@media (max-width: 1399.98px) {
+}
+
+@media (max-width: 1199.98px) {
+}
+
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 767.98px) {
+}
+
+@media (max-width: 575.98px) {
+    .contact .contact__content {
+        width: 80vw;
+    }
+}

@@ -1,0 +1,18 @@
+<div class="modal">
+    <div class="header">
+        <div class="close">
+            <img
+                src="../../../../../../assets/icons/close-icon.svg"
+                alt="close-icon"
+                (click)="closeModal()"
+            />
+        </div>
+        <div class="work">
+            <span> {{ office | uppercase }} </span>
+        </div>
+    </div>
+
+    <div class="names">
+        <span *ngFor="let name of names"> {{ name }} </span>
+    </div>
+</div>

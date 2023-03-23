@@ -1,0 +1,30 @@
+<div
+    class="card"
+    [ngClass]="{
+        'card-mobile-open': noticeC.active,
+        'card-mobile-close': !noticeC.active
+    }"
+    (click)="openModal(true)"
+>
+    <div
+        class="card-title"
+        [ngStyle]="{ background: noticeC.active ? '#A5BC65' : '#D65D5D' }"
+    >
+        <p>CHAMADA PÚBLICA {{ padLeft(noticeC.callNumber, 3) }}/{{ noticeC.callYear }}</p>
+    </div>
+
+    <div
+        class="card-text"
+        [ngStyle]="{ color: noticeC.active ? '#A5BC65' : '#D65D5D' }"
+    >
+        <p>{{ noticeC.description }}</p>
+    </div>
+
+    <div
+        class="card-button"
+        (click)="openModal(false)"
+        [ngClass]="{ active: noticeC.active }"
+    >
+        <p>SAIBA MAIS</p>
+    </div>
+</div>

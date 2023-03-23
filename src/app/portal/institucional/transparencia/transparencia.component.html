@@ -1,0 +1,52 @@
+<div class="content">
+    <div class="content__title">
+        <h1 class="title-transparencia">Portal da Transparência</h1>
+    </div>
+
+    <div class="content__text">
+        <p>
+            A <strong>Lei Complementar 131, de 27 de maio de 2009</strong>,
+            alterou a redação da Lei de Responsabilidade Fiscal no que se refere
+            à transparência da gestão fiscal, inovando ao determinar a
+            disponibilização, em tempo real, de informações pormenorizadas sobre
+            a execução orçamentária e financeira da União, dos Estados, do
+            Distrito Federal e dos Municípios.
+        </p>
+    </div>
+
+    <div class="actions">
+        <app-button [externalRoute]="portal_url"> ACESSO AO PORTAL </app-button>
+    </div>
+
+    <div class="content__title2">
+        <h1 class="title2-transparencia">Prestação de Contas dos Subsídios</h1>
+    </div>
+    <div class="content__text">
+        <p>
+            De acordo com a Portaria <strong>nº005/2021</strong> publicada no
+            Diário Oficial do Município de Parnamirim/RN no dia
+            <strong>28 de Abril de 2021</strong>, fica disponível as instruções
+            da <strong>Prestação de Contas dos Subsídios</strong> aos Espaços
+            Culturais, bem como os modelos de Relatório de Desenvolvimento de
+            Proposta referentes aos editais Cria Parnamirim, Patrimônio e
+            Cultura Popular e Territórios Culturais e Tradicionais.
+        </p>
+    </div>
+
+    <div class="actions">
+        <app-button [externalRoute]="portaria_subsidios_url">
+            PORTARIA Nº005/2021
+        </app-button>
+        <app-button [externalRoute]="instrucoes_subsidio_url">
+            INSTRUÇÕES PARA SUBSÍDIOS E ESPAÇOS CULTURAIS
+        </app-button>
+    </div>
+    <div class="actions" [style.margin-top]="'1.5rem'">
+        <app-button [externalRoute]="cria_parnamirim_url">
+            MODELO CRIA PARNAMIRIM
+        </app-button>
+        <app-button [externalRoute]="modelo_patrimonio_url">
+            MODELO PATRIMÔNIO E TERRITÓRIOS
+        </app-button>
+    </div>
+</div>

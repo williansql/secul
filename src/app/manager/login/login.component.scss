@@ -1,0 +1,75 @@
+.content {
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--blue);
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    position: absolute;
+    max-width: 100%;
+    display: grid;
+    height: 100%;
+    inset: 0;
+
+    .card {
+        box-shadow: 0rem .125rem .3125rem rgba(0, 0, 0, 0.25);
+        justify-content: center;
+        flex-direction: column;
+        background: #ffffff;
+        border-radius: .3125rem;
+        display: flex;
+        height: 23rem;
+        width: 30rem;
+
+        p {
+            text-transform: uppercase;
+            color: var(--blue);
+            margin-bottom: 2.8125rem;
+            text-align: center;
+            line-height: 100%;
+            font-weight: 700;
+            font-size: 2rem;
+        }
+
+        .btn {
+            justify-content: flex-end;
+            display: flex;
+            button {
+                filter: drop-shadow(0rem .1875rem .3125rem rgba(0, 0, 0, 0.25));
+                background-color: var(--blue);
+                letter-spacing: 0.05em;
+                color: var(--white);
+                border-radius: .3125rem;
+                line-height: 21px;
+                font-weight: 700;
+                font-size: 1.125rem;
+                border: none;
+                width: 6.625rem;
+                height: 3.125rem;
+                margin-right: 3.3125rem;
+                cursor: pointer;
+            }
+        }
+
+        .input {
+            flex-direction: column;
+            margin-bottom: 1.875rem;
+            align-items: center;
+            display: flex;
+            gap: 2.6875rem;
+            input {
+                width: 23.125rem;
+                border: none;
+                border-bottom: .0625rem solid var(--grey-tertiary);
+                padding: .3125rem 0rem;
+                outline: none;
+            }
+
+            ::placeholder {
+                font-weight: 400;
+                font-size: 1.125rem;
+                line-height: 100%;
+                color: var(--grey-tertiary);
+            }
+        }
+    }
+}

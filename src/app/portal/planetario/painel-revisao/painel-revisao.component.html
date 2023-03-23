@@ -1,0 +1,93 @@
+<div class="box">
+    <div class="info">
+        <h1>REVISÃO DE DADOS</h1>
+        <div class="text">
+            <h3>DATA E HORA</h3>
+            <h2>
+                {{ reservationData.reservationDate | date : "longDate" }},
+                {{ reservationData.reservationDate | date : "HH:mm" }}h -
+                {{
+                    reservationData.reservationDate + 3600000 | date : "HH:mm"
+                }}h
+            </h2>
+
+            <h3>INSTITUIÇÃO</h3>
+            <p class="border-bottom">
+                {{
+                    reservationData.isInstitutionPublic ? "Pública" : "Privada"
+                }}
+            </p>
+
+            <div class="form-section border-bottom">
+                <div class="border-bottom_temp">
+                    <h3>NOME DA INSTITUIÇÃO</h3>
+                    <p>
+                        {{ reservationData.institutionName }}
+                    </p>
+                </div>
+                <div>
+                    <h3>QUANTIDADE DE ALUNOS</h3>
+                    <p>{{ reservationData.numberOfStudents }}</p>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div>
+                    <h3>E-MAIL</h3>
+                    <p>{{ reservationData.email }}</p>
+                </div>
+                <div>
+                    <h3>NÚMERO PARA CONTATO</h3>
+                    <p>{{ reservationData.contactNumber | phone }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="confirmation">
+            <h4>OS DADOS INFORMADOS ESTÃO CORRETOS?</h4>
+            <div
+                style="
+                    display: flex;
+                    gap: 0.5rem;
+                    flex-wrap: wrap;
+                    margin-bottom: 0.5rem;
+                "
+            >
+                <div
+                    class="button"
+                    style="background-color: #36aa3b"
+                    (click)="submitInfo()"
+                >
+                    SIM
+                </div>
+                <div
+                    class="button"
+                    style="background-color: #f00303"
+                    (click)="closeModal()"
+                >
+                    NÃO
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        class="overlay"
+        [ngStyle]="{ display: loading ? 'flex' : 'none' }"
+    ></div>
+    <div
+        class="overlay-info"
+        [ngStyle]="{ display: infoSuccess ? 'flex' : 'none' }"
+    >
+        <img src="assets/icons/confirmation2.svg" alt="" />
+        <h2 style="color: #36aa3b">Sucesso!</h2>
+        <p>Agendamento feito, aguarde a confirmação pelo e-mail</p>
+    </div>
+    <div
+        class="overlay-info"
+        [ngStyle]="{ display: infoError ? 'flex' : 'none' }"
+    >
+        <img src="assets/icons/error.svg" alt="" />
+        <h2 style="color: #eb2d34">Oops...</h2>
+        <p>Algo deu errado, espere alguns minutos e tente novamente</p>
+    </div>
+</div>

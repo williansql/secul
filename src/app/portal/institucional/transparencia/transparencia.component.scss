@@ -1,0 +1,117 @@
+.content {
+    &__title {
+        font-size: 1.3rem;
+    }
+    &__title2 {
+        font-size: 1.3rem;
+    }
+    &__text {
+        color: black;
+    }
+    .actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 2rem;
+    }
+}
+
+.margin {
+    margin-top: 1rem;
+}
+
+@media (max-width: 1199.98px) {
+    .content {
+        height: auto;
+        .actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .content {
+        &__title {
+            font-size: 1rem;
+        }
+        &__title2 {
+            margin-top: 3%;
+            font-size: 1rem;
+        }
+        &__text {
+            text-align: justify;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .content {
+        height: auto;
+        &__title {
+            font-size: 1rem;
+        }
+        &__title2 {
+            margin-top: 3%;
+            font-size: 1rem;
+        }
+        .actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .content {
+        height: auto;
+        &__title {
+            font-size: 1rem;
+        }
+        &__title2 {
+            margin-top: 3%;
+            font-size: 1rem;
+        }
+        .actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+}
+
+@media (max-width: 259.98px) {
+    .content {
+        padding: 2.25rem;
+        height: auto;
+        &__title {
+            font-size: 0.8rem;
+        }
+        &__title2 {
+            margin-top: 2rem;
+            font-size: 0.8rem !important;
+        }
+        .actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+}

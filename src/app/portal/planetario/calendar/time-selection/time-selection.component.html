@@ -1,0 +1,43 @@
+<div class="box">
+    <h2>{{ currentDate | date : "longDate" }}</h2>
+
+    <div class="selection">
+        <div class="top">
+            <h4>MATUTINO</h4>
+            <div
+                class="pill"
+                [ngClass]="{
+                    blocked:
+                        selectedRange.init != time.init &&
+                        selectedRange != zeroRange,
+                    available: time.available,
+                    unavailable: !time.available
+                }"
+                *ngFor="let time of timeRanges | slice : 0 : 4"
+                (click)="setTimeRange(time)"
+            >
+                {{ time.init | date : "hh:mm" }}h -
+                {{ time.init + 3600000 | date : "hh:mm" }}h
+            </div>
+        </div>
+    
+        <div class="bottom">
+            <h4>VESPERTINO</h4>
+            <div
+                class="pill"
+                [ngClass]="{
+                    blocked:
+                        selectedRange.init != time.init &&
+                        selectedRange != zeroRange,
+                    available: time.available,
+                    unavailable: !time.available
+                }"
+                *ngFor="let time of timeRanges | slice : 4 : 9"
+                (click)="setTimeRange(time)"
+            >
+                {{ time.init | date : "HH:mm" }}h -
+                {{ time.init + 3600000 | date : "HH:mm" }}h
+            </div>
+        </div>
+    </div>
+</div>

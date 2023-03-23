@@ -1,0 +1,29 @@
+<div class="box"
+    (drop)="dropHandler($event)"
+    (dragover)="dragOverHandler($event)">
+    <ng-container *ngIf="files.length < 1">
+        <div id="icon"></div>
+        <div id="input">
+            <button (click)="changeInput(more)">ESCOLHER ARQUIVOS</button>
+            <p>ou solte os arquivos aqui</p>
+        </div>
+    </ng-container>
+    <div class="files" *ngIf="files.length > 0" [ngStyle]="{
+      'grid-template-columns': options.multi ? 'repeat(auto-fill, 9.375rem)' : '1fr'}">
+
+        <div class="file"
+        *ngFor="let file of files; let i = index"
+        [ngClass]="{'unique': !options.multi,'highlighted': options.highlightedMode && file.highlighted, 'hover':options.highlightedMode}"
+        style="background: url({{file.src}}) var(--light-grey)"
+        (mouseenter)="hover=true;indexHover = i"
+        (mouseleave)="hover=false;indexHover = i"
+        (click)="setHighlighted(i)">
+        <div *ngIf="hover &&  options.highlightedMode && indexHover == i && !file.highlighted" id="hover-action"></div>
+        <div id="icon-trash" (click)="deleteFile(i)" alt="" [ngStyle]="{'marginLeft': hover &&  options.highlightedMode && indexHover == i  && !file.highlighted ? '-2rem' : '0rem'}"></div>
+        </div>
+        <label *ngIf="options.multi" for="moreFile">
+          <div id="add-button"></div>
+        </label>
+    </div>
+  </div>
+  <input [multiple]="options.multi" id="moreFile" #more type="file" style="visibility: hidden;">

@@ -1,0 +1,14 @@
+<div class="card" *ngIf="notice">
+    <h3
+        class="card__title"
+        [style.color]="notice.active ? '#76A485' : '#EB2D34'"
+    >
+        CHAMADA PÚBLICA {{ padLeft(notice.callNumber, 3) }}/{{ notice.callYear }}
+    </h3>
+    <p class="card__text">{{ notice.description }}</p>
+</div>
+<img
+    src="../../../../../assets/icons/arrow-right-landingpage.svg"
+    alt="arrow"
+    (click)="goToEditais()"
+/>

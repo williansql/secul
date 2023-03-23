@@ -1,0 +1,53 @@
+<section class="content">
+    <h1>
+        Agendamento planetário <img src="assets/icons/arrow-path.svg" />
+        <span> Validar agendamento</span>
+    </h1>
+
+    <app-table [pagination]="{
+        page: 0,
+        size: 5,
+        offset: 0,
+        numberOfElements: 30,
+        numberOfPages: 5,
+        totalNumberOfElements: 9,
+        hasNextPage: true,
+        firstPage: true,
+        lastPage: false
+    }">
+        <div id="sub" subtitle>
+            <img src="assets/icons/trash.svg" />
+            <span>excluir</span>
+        </div>
+        <thead titles>
+            <tr>
+                <th *ngFor="let name of titles">{{ name }}</th>
+            </tr>
+        </thead>
+        <tbody body *ngIf="data else notData">
+            <tr *ngFor="let value of data; index as i">
+                <td>{{ value.reservationDate | date : "dd/MM/yy" }}</td>
+                <td>{{ turn[i] }}</td>
+                <td>
+                    {{ value.reservationDate | date : "HH" }}:00 -
+                    {{ value.reservationDate + 3600000 | date : "HH" }}:00
+                </td>
+                <td>{{ value.institutionName }}</td>
+                <td>{{ value.numberOfStudents }}</td>
+                <td>{{ value.email }}</td>
+                <td>
+                    <button (click)="openModal(i,action.CONFIRM)" id="confirmed">CONFIRMAR</button>
+                    <img (click)="openModal(i,action.DELETE)" src="assets/icons/trash.svg" />
+                </td>
+            </tr>
+        </tbody>
+
+        <ng-template #notData>
+            <tbody>
+                <tr style="color: var(--grey-background); line-height: 5rem; ">
+                    Nenhuma reserva encontrada
+                </tr>
+            </tbody>
+        </ng-template>
+    </app-table>
+</section>

@@ -1,0 +1,85 @@
+<div class="bodyFormEditais">
+    <div class="container">
+        <span class="tituloEditais">Cadastro de editais</span>
+        <form [formGroup]="linksForm" (ngSubmit)="onSubmit()">
+            <div class="groupForm">
+                <input
+                    required minlength="5"
+                    class="titulo"
+                    type="text"
+                    placeholder="Titulo"
+                    formControlName="titulo"
+                />
+                <textarea
+                    required minlength="20"
+                    class="descreva"
+                    placeholder="Descreva aqui o edital..."
+                    formControlName="descreva"
+                >
+                </textarea>
+                <input
+                    class="email"
+                    type="email"
+                    placeholder="E-mail para contato"
+                    formControlName="email"
+                />
+
+                <div class="styleLinks" >
+                    <input
+                        class="nameLink"
+                        type="text"
+                        placeholder="Nome do link"
+                        formControlName="nameLink"
+                        required minlength="5"
+                    />
+                    <input
+                        class="pasteLink"
+                        type="text"
+                        placeholder="Cole o link aqui"
+                        formControlName="pasteLink"
+                        required minlength="5"
+                    />
+                </div>
+
+            </div>
+            <div formArrayName="links">
+                <div *ngFor="let link of links.controls; let i = index">
+                    <div class="formArray" [formGroupName]="i">
+                        <input
+                            class="nameLink"
+                            type="text"
+                            placeholder="Nome do link"
+                            formControlName="nameLink"
+                            required minlength="5"
+                        />
+                        <input
+                            class="pasteLink"
+                            type="text"
+                            placeholder="Cole o link aqui"
+                            formControlName="pasteLink"
+                            required minlength="5"
+                        />
+                        <img
+                            (click)="removeLinks(i)"
+                            src="./assets/icons/Modal/lixeira.svg"
+                            alt="remover"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button (click)="addLinks()" type="button" class="creatLinks">
+                    ADICIONAR LINK +
+                </button>
+                <button
+                    [disabled]="linksForm.invalid"
+                    class="submit"
+                    type="submit"
+                >
+                    CADASTRAR
+                </button>
+            </div>
+        </form>
+    </div>
+    <p>{{ this.linksForm.value | json }}</p>
+</div>

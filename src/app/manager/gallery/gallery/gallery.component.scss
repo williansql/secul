@@ -1,0 +1,104 @@
+.content {
+    .titlePage {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 100%;
+        color: var(--blue);
+        margin-bottom: 3.75rem;
+    }
+
+    .forms {
+        width: 100%;
+        display: grid;
+        gap: 1rem;
+        margin-bottom: 3rem;
+
+        .galleryName {
+            height: 2.813rem;
+        }
+
+        .galleryName {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--dark-grey);
+            border: 0.06rem solid var(--grey-secondary);
+            border-radius: .3rem;
+        }
+
+        .galleryName::placeholder {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--grey-background);
+        }
+
+        .columns {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(2, 1fr);
+
+            .select {
+                height: 2.813rem;
+                width: 100%;
+                padding: 0 1rem;
+                font-size: 1rem;
+                font-weight: 400;
+                color: var(--dark-grey);
+                border: 0.06rem solid var(--grey-secondary);
+                border-radius: .3rem;
+                background: var(--white);
+                background-image: url("../../../../assets/icons/select-icon.svg");
+                background-repeat: no-repeat, repeat;
+                background-position: right 0.9rem top 50%, 0 0;
+                background-size: 2rem auto, 100%;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+            }
+
+            .select.ng-invalid {
+                color: var(--grey-background);
+            }
+
+            .select option {
+                color: var(--dark-grey);
+            }
+
+            .select option:disabled {
+                color: var(--grey-background);
+            }
+        }
+
+        .galleryArchives{
+            margin: .5rem;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: flex-end;
+
+        .buttonSave {
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--white);
+            border: none;
+            border-radius: .3rem;
+            padding: .75rem 1rem;
+            text-transform: uppercase;
+            background-color: var(--green-tertiary);
+        }
+
+        .buttonSave:disabled {
+            cursor: default;
+            background-color: var(--grey-tertiary);
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .columns {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+}

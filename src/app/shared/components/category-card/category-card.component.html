@@ -1,0 +1,17 @@
+<div class="cardMenu" *ngIf="subMenus?.active">
+    <div class="frontCard" style="cursor: default;">
+        <img [src]="content.icon"/>
+        <span>{{content.text | uppercase}}</span>
+    </div>
+    <div class="backCard" *ngIf="subMenus?.active">
+        <div *ngFor="let menu of subMenus?.item" class="menu" (click)="sendContext(menu.text)">
+            <img [src]="menu.icon"/>
+            <span>{{menu.text}}</span>
+        </div>
+    </div>
+</div>
+
+<div class="card" *ngIf="!subMenus?.active" (click)="sendContext(content.text)">
+    <img [src]="content.icon"/>
+    <span>{{content.text | uppercase}}</span>
+</div>

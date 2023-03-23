@@ -1,0 +1,18 @@
+<div class="card" (click)="openGallery()">
+    <div class="card__imgs">
+        <img
+            id="expand-icon"
+            src="./../../../../assets/icons/expand-icon.svg"
+            alt="Exibir Galeria"
+        />
+        <div *ngIf="!info.slug" class="msg-default">
+            <span>{{ info.name }}</span>
+            <span> {{ info.date * 1000 | date : "yyyy" }} </span>
+        </div>
+        <img *ngIf="info.slug" [src]="info.slug" alt="img" />
+    </div>
+    <div class="card__text">
+        <span> {{ info.name | titlecase }} </span>
+        <span> {{ info.date * 1000 | date : "yyyy" }} </span>
+    </div>
+</div>

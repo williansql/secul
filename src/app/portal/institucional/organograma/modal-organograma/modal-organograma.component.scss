@@ -1,0 +1,82 @@
+.modal {
+    width: 38.2rem;
+    max-height: 25rem;
+    border-radius: 5px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.header {
+    width: 100%;
+    background: rgba(7, 97, 157, 0.15);
+    height: 33%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .work span {
+        font-size: 1.3rem;
+        word-break: keep-break;
+    }
+
+    .names span {
+        font-size: 1.6rem;
+        width: 90%;
+        word-break: keep-break;
+    }
+}
+
+.names {
+    height: 67%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    padding-block: 1.5rem;
+    overscroll-behavior: contain;
+}
+
+.close {
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    width: 0.9rem;
+    img {
+        cursor: pointer;
+    }
+}
+
+span {
+    color: var(--blue);
+    font-size: 1.8rem;
+    font-weight: 700;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+@media (max-width: 767.98px) {
+    .modal {
+        overflow-y: auto;
+        width: 75vw;
+        display: block;
+
+        .close {
+            width: 0.7rem;
+        }
+
+        .work span {
+            font-size: 1rem;
+        }
+
+        .names span {
+            width: 90%;
+            font-size: 1.4rem;
+        }
+    }
+}

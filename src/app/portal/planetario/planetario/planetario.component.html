@@ -1,0 +1,67 @@
+<div class="content">
+    <div class="content__title">
+        <h1>Visita ao planetário</h1>
+    </div>
+
+    <div
+        class="both"
+        [ngClass]="{
+            'transition-true': window == true,
+            'transition-false': window == false
+        }"
+    >
+        <div class="one">
+            <div class="content__text">
+                <p>
+                    Selecione a data e o horário desejado e finalize o cadastro
+                    no formulário.
+                </p>
+                <div class="content-btn">
+                    <div class="selection-block">
+                        <div class="calendar-block">
+                            <app-calendar
+                                (sendDate)="updateDate($event)"
+                            ></app-calendar>
+                        </div>
+                        <app-legendas></app-legendas>
+                    </div>
+                    <button
+                        id="btn-desktop"
+                        [ngClass]="{ btn_disabled: !timeIsSelected }"
+                        (click)="toggleWindow('toRight')"
+                    >
+                        <img src="/assets/icons/double-arrow-right.svg" />
+                    </button>
+                </div>
+                <button
+                    id="btn-mobile"
+                    [ngClass]="{ btn_disabled: !timeIsSelected }"
+                    (click)="toggleWindow('toRight')"
+                >
+                    <span>CONTINUAR >></span>
+                </button>
+            </div>
+        </div>
+        <div class="two">
+            <p>
+                Preencha as informações abaixo com atenção para finalizar seu
+                agendamento.
+            </p>
+            <div class="content-btn2">
+                <button
+                    id="btn-desktop"
+                    class="rotate"
+                    (click)="toggleWindow('toLeft')"
+                >
+                    <img src="/assets/icons/double-arrow-right.svg" />
+                </button>
+                <button id="btn-mobile" (click)="toggleWindow('toLeft')">
+                    <span><< VOLTAR</span>
+                </button>
+                <app-formulario
+                    (formSubmited)="formData($event)"
+                ></app-formulario>
+            </div>
+        </div>
+    </div>
+</div>

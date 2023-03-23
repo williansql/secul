@@ -1,0 +1,12 @@
+<div class="content">
+    <h2 class="titlePage">Cadastro de evento</h2>
+
+    <form [formGroup]="eventForm" (ngSubmit)="saveEvent()" class="forms">
+        <input formControlName="eventName" class="formName" type="text" placeholder="Nome do evento" />
+        <textarea formControlName="eventInfo" class="formText" placeholder="Descreva aqui o evento..."></textarea>
+
+        <div class="buttons">
+            <button type="submit" class="buttonSave" [disabled]="eventForm.invalid">cadastrar</button>
+        </div>
+    </form>    
+</div>

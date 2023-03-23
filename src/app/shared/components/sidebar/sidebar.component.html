@@ -1,0 +1,229 @@
+<nav
+    [ngClass]="{
+        shadow: true,
+        dark_colors: true
+    }"
+>
+    <ul>
+        <li
+            id="li-inicio"
+            [ngClass]="{
+                'li-inicio': onLandingPage
+            }"
+        >
+            <button routerLink="inicio">
+                <span [class.selected]="actualRoute == '/inicio'"
+                    >PÁGINA INICIAL</span
+                >
+            </button>
+        </li>
+        <li>
+            <div class="dropdown">
+                <button (click)="toggleDropdown('institucional')">
+                    <span
+                        [class.selected]="
+                            menuInstitucional() ||
+                            dropdownSelected == 'institucional'
+                        "
+                        >INSTITUCIONAL</span
+                    >
+                    <svg
+                        [class.rotateArrow]="
+                            dropdownSelected == 'institucional'
+                        "
+                        width="16"
+                        height="9"
+                        viewBox="0 0 16 9"
+                        fill="none"
+                        stroke="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M15 0.999817L8 7.99982L1 0.999817"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </button>
+                <div
+                    [ngClass]="{
+                        dropdown_content: true,
+                        visible: dropdownSelected == 'institucional'
+                    }"
+                >
+                    <a (click)="redirect('institucional/transparencia')"
+                        ><span>TRANSPARÊNCIA</span></a
+                    >
+                    <hr />
+                    <a (click)="redirect('institucional/sobre')"
+                        ><span>SOBRE A FUNPAC</span></a
+                    >
+                    <hr />
+                    <a (click)="redirect('institucional/organograma')"
+                        ><span>ORGANOGRAMA</span></a
+                    >
+                    <hr />
+                    <a (click)="redirect('institucional/contato')"
+                        ><span>CONTATO</span></a
+                    >
+                    <hr />
+                    <a
+                        id="word-break"
+                        (click)="redirect('institucional/credenciados')"
+                        ><span>ARTISTAS CREDENCIADOS</span></a
+                    >
+                </div>
+            </div>
+        </li>
+        <li>
+            <button routerLink="editais">
+                <span [class.selected]="actualRoute == '/editais'"
+                    >EDITAIS</span
+                >
+                <svg
+                    id="arrow-editais"
+                    width="16"
+                    height="9"
+                    viewBox="0 0 16 9"
+                    fill="none"
+                    stroke="var(--blue)"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M15 0.999817L8 7.99982L1 0.999817"
+                        stroke="var(--blue)"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+                </svg>
+            </button>
+        </li>
+        <li>
+            <div class="dropdown">
+                <button id="btn-eventos" (click)="toggleDropdown('eventos')">
+                    <span [class.selected]="menuEventos()">EVENTOS</span>
+                    <svg
+                        [class.rotateArrow]="dropdownSelected == 'eventos'"
+                        width="16"
+                        height="9"
+                        viewBox="0 0 16 9"
+                        fill="none"
+                        stroke="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M15 0.999817L8 7.99982L1 0.999817"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </button>
+                <div
+                    [ngClass]="{
+                        dropdown_content: true,
+                        visible: dropdownSelected == 'eventos'
+                    }"
+                >
+                    <a (click)="redirect('eventos/carnaval')"
+                        ><span>CARNAVAL</span></a
+                    >
+                    <hr />
+                    <a (click)="redirect('eventos/marcha-jesus')"
+                        ><span>MARCHA PARA JESUS</span></a
+                    >
+                    <hr />
+                    <a (click)="redirect('eventos/roteiro-junino')"
+                        ><span>ROTEIRO JUNINO</span></a
+                    >
+                    <hr />
+                    <a (click)="redirect('eventos/festa-sabugo')"
+                        ><span>FESTA DO SABUGO</span></a
+                    >
+                    <hr />
+                    <!-- <a (click)="redirect('eventos/virada-cultural')"
+            ><span>VIRADA CULTURAL</span></a
+          >
+          <hr /> -->
+                    <a (click)="redirect('eventos/outros')"
+                        ><span>OUTROS</span></a
+                    >
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="dropdown">
+                <button (click)="toggleDropdown('espacos-culturais')">
+                    <span
+                        [class.selected]="
+                            menuEspacosCulturais() ||
+                            dropdownSelected == 'espacos-culturais'
+                        "
+                        >ESPAÇOS CULTURAIS</span
+                    >
+                    <svg
+                        [class.rotateArrow]="
+                            dropdownSelected == 'espacos-culturais'
+                        "
+                        width="16"
+                        height="9"
+                        viewBox="0 0 16 9"
+                        fill="none"
+                        stroke="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M15 0.999817L8 7.99982L1 0.999817"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </button>
+                <div
+                    [ngClass]="{
+                        dropdown_content: true,
+                        visible: dropdownSelected == 'espacos-culturais'
+                    }"
+                >
+                    <a (click)="redirect('espacos-culturais/nucleo-musica')"
+                        ><span>NÚCLEO DE MÚSICA</span></a
+                    >
+                    <hr />
+                    <a (click)="redirect('espacos-culturais/nucleo-danca')"
+                        ><span>NÚCLEO DE DANÇA</span></a
+                    >
+                </div>
+            </div>
+        </li>
+        <li>
+            <button routerLink="planetario">
+                <span [class.selected]="actualRoute == '/planetario'"
+                    >PLANETÁRIO</span
+                >
+                <svg
+                    id="arrow-editais"
+                    width="16"
+                    height="9"
+                    viewBox="0 0 16 9"
+                    fill="none"
+                    stroke="var(--blue)"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M15 0.999817L8 7.99982L1 0.999817"
+                        stroke="var(--blue)"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+                </svg>
+            </button>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,20 @@
+<div class="pagination" *ngIf="pagination">
+    <span (click)="!pagination.firstPage && emitPage(pagination.page - 2)"
+      >Anterior</span
+    >
+    <span
+      [ngClass]="{ active: i == pagination.page }"
+      class="page"
+      (click)="
+        i != pagination.page && (pagination.page = i); emitPage(pagination.page)
+      "
+      *ngFor="let page of pages; let i = index"
+      >{{
+        (i + 1).toLocaleString("en-US", {
+          minimumIntegerDigits: 2
+        })
+      }}</span>
+    <span (click)="!pagination.lastPage && emitPage(pagination.page)"
+      >Próximo</span>
+  </div>
+  

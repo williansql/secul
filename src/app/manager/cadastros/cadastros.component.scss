@@ -1,0 +1,15 @@
+.content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 3rem;
+    width: 58rem;
+}
+
+:host ::ng-deep app-category-card {
+    &:last-child {
+        img {
+            margin-left: 1.7rem;
+        }
+    }
+}

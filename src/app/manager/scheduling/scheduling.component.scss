@@ -1,0 +1,44 @@
+@import "./../../shared/styles/mixins";
+
+.content{
+    height: fit-content;
+    h1{
+        font-weight: 500;
+        font-size: 3rem;
+        span{
+            font-weight: 700;
+        }
+    }
+    
+    #sub{
+        display: flex;
+        align-self: center;
+        column-gap: .7rem;
+        img{
+            @include filter-red-primary();
+            margin: 0;
+            cursor: default;
+        }
+        span{
+            color: var(--grey-background);
+            font-size: 1rem;
+        }
+    }
+
+}
+
+#confirmed{
+    background: var(--green-tertiary);
+    height: 2.0625rem;
+    width: 6.5625rem;
+    border: 0;
+    border-radius: .1875rem;
+    color: var(--white);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+img{
+    margin-left: 1rem;
+    cursor: pointer;
+}

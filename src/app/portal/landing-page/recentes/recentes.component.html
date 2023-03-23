@@ -1,0 +1,33 @@
+<div class="content">
+    <div class="left">
+        <div class="header">
+            <h1 class="top__separator__title">EDITAIS MAIS RECENTES</h1>
+            <p class="top__separator__text">
+                Editais marcados em verde estão em aberto, aqueles marcados em
+                vermelho se encontram encerrados.
+            </p>
+        </div>
+        <div class="bottom__chamadas" *ngIf="notices">
+            <app-card-chamadas
+                *ngFor="let i of [0, 1, 2]"
+                [notice]="notices[i]"
+            ></app-card-chamadas>
+        </div>
+    </div>
+    <div class="right">
+        <app-button id="desktop" [internalRoute]="'/editais'">
+            VER MAIS EDITAIS
+        </app-button>
+        <app-polaroid
+            [ngStyle]="{ transform: 'rotate(4deg)' }"
+            [sizeImg]="true"
+            imgUrl="../../../../assets/images/image-05.png"
+        >
+        </app-polaroid>
+        <div class="button-mobile">
+            <app-button id="mobile" [internalRoute]="'/editais'">
+                VER MAIS EDITAIS
+            </app-button>
+        </div>
+    </div>
+</div>

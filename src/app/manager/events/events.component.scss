@@ -1,0 +1,68 @@
+@import "./../../shared/styles/mixins";
+
+.content {
+    .titlePage {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 100%;
+        color: var(--blue);
+        margin-bottom: 3.75rem;
+    }
+
+    .forms {
+        width: 100%;
+        display: grid;
+        gap: 1rem;
+        margin-bottom: 3rem;
+
+        .formName {
+            height: 2.813rem;
+        }
+
+        .formText {
+            height: 11.25rem;
+            min-width: 100%;
+            max-width: 100%;
+        }
+
+        .formName,
+        .formText {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--dark-grey);
+            border: 0.06rem solid var(--grey-secondary);
+            border-radius: .3rem;
+        }
+
+        .formName::placeholder,
+        .formText::placeholder {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--grey-background);
+        }
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: flex-end;
+
+        .buttonSave {
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--white);
+            border: none;
+            border-radius: .3rem;
+            padding: .75rem 1rem;
+            text-transform: uppercase;
+            background-color: var(--green-tertiary);
+        }
+
+        .buttonSave:disabled {
+            cursor: default;
+            background-color: var(--grey-tertiary);
+        }
+    }
+}

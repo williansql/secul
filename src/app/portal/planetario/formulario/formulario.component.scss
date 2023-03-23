@@ -1,0 +1,291 @@
+@media (min-width: 1400px) {
+    .body {
+        box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.25);
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .content-form {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.875rem;
+        }
+
+        .radio {
+            display: flex;
+            &-class {
+                margin-top: 0.75rem;
+                gap: 0.875rem;
+                margin-right: 3rem;
+                display: flex;
+                align-items: center;
+            }
+            &-id {
+                color: var(--blue);
+                height: 1.25rem;
+                width: 1.6rem;
+            }
+        }
+
+        .name-mail {
+            display: flex;
+            flex-direction: column;
+            gap: 1.06rem;
+        }
+
+        .quantity-phone {
+            display: flex;
+            flex-direction: column;
+            gap: 1.06rem;
+        }
+
+        input {
+            padding: 0.625rem;
+            font-size: 1rem;
+            width: 100%;
+            height: 2.5rem;
+            border: 0.0625rem solid var(--blue);
+            border-radius: 0.25rem;
+        }
+
+        p {
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            margin: 0;
+            color: var(--blue);
+            span {
+                color: var(--red);
+            }
+        }
+        label {
+            font-weight: 500;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        .btnFinalizarMobile {
+            display: none;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 0.25rem;
+            button {
+                cursor: pointer;
+                font-size: 1.25rem;
+                font-weight: 700;
+                padding: 0.5625rem 0.875rem;
+                color: var(--white);
+                text-transform: uppercase;
+                background: var(--green-secondary);
+                border-radius: 0.25rem;
+                border: 0 solid;
+                &:disabled {
+                    background-color: var(--grey-secondary);
+                }
+            }
+        }
+
+        .alert div {
+            font-size: 0.7rem;
+            font-weight: 500;
+            position: absolute;
+            color: var(--red);
+        }
+    }
+}
+
+@media (max-width: 1399.98px) {
+    .body {
+        box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.25);
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .content-form {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.875rem;
+        }
+
+        .radio {
+            display: flex;
+            &-class {
+                margin-top: 0.75rem;
+                gap: 0.875rem;
+                margin-right: 3rem;
+                display: flex;
+                align-items: center;
+            }
+            &-id {
+                color: var(--blue);
+                height: 1.25rem;
+                width: 1.6rem;
+            }
+        }
+
+        .name-mail {
+            display: flex;
+            flex-direction: column;
+            gap: 1.06rem;
+        }
+
+        .quantity-phone {
+            display: flex;
+            flex-direction: column;
+            gap: 1.06rem;
+        }
+
+        input {
+            padding: 0.625rem;
+            font-size: 1rem;
+            width: 100%;
+            height: 2.5rem;
+            border: 0.0625rem solid var(--blue);
+            border-radius: 0.25rem;
+        }
+
+        p {
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            margin: 0;
+            color: var(--blue);
+            span {
+                color: var(--red);
+            }
+        }
+        label {
+            font-weight: 500;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        .btnFinalizarMobile {
+            display: none;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 0.25rem;
+            button {
+                cursor: pointer;
+                font-size: 1.25rem;
+                font-weight: 700;
+                padding: 0.5625rem 0.875rem;
+                color: var(--white);
+                text-transform: uppercase;
+                background: var(--green-secondary);
+                border-radius: 0.25rem;
+                border: 0 solid;
+                &:disabled {
+                    background-color: var(--grey-secondary);
+                }
+            }
+        }
+
+        .alert div {
+            font-size: 0.7rem;
+            font-weight: 500;
+            position: absolute;
+            color: var(--red);
+        }
+    }
+}
+
+@media (max-width: 1199.98px) {
+}
+
+@media (max-width: 991.98px) {
+    .body {
+        box-shadow: none;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .content-form {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            box-shadow: 0 0.125rem 0.5rem rgb(0 0 0 / 25%);
+            border-radius: 1rem;
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            gap: 1.875rem;
+        }
+
+        .radio {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .quantity-phone {
+            display: flex;
+            flex-direction: column;
+            gap: 1.06rem;
+        }
+
+        .btn {
+            display: none;
+        }
+
+        .btnFinalizarMobile {
+            display: flex;
+            place-self: flex-end;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+            button {
+                cursor: pointer;
+                font-size: 1.25rem;
+                font-weight: 700;
+                padding: 0.5625rem 0.875rem;
+                color: var(--white);
+                text-transform: uppercase;
+                background: var(--green-secondary);
+                border-radius: 0.25rem;
+                border: 0 solid;
+                &:disabled {
+                    background-color: var(--grey-secondary);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+}
+
+@media (max-width: 575.98px) {
+}
+
+@media (max-width: 259.98px) {
+}

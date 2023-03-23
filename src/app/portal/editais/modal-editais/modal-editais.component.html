@@ -1,0 +1,92 @@
+<div class="modal-notice">
+    <div
+        class="close-modal"
+        (click)="closeModal()"
+        [ngStyle]="{ color: notice.active ? '#A5BC65' : '#D65D5D' }"
+    >
+        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M2.22729 14L8.22729 8M8.22729 8L14.2273 2M8.22729 8L2.22729 2M8.22729 8L14.2273 14"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </svg>
+    </div>
+
+    <h1 [ngStyle]="{ color: notice.active ? '#A5BC65' : '#D65D5D' }">
+        CHAMADA PÚBLICA {{ padLeft(notice.callNumber, 3) }}/{{ notice.callYear }} PARA {{ notice.title }}
+    </h1>
+
+    <div class="modal-content-inside">
+        <p>{{ notice.detailDescription }}</p>
+
+        <p>
+            As inscrições serão no período de
+            {{ notice.initDate * 1000 | date : "dd" }}
+            <span *ngIf="checkDate('month')">
+                de {{ notice.initDate * 1000 | date : "MMMM" }}
+            </span>
+            <span *ngIf="checkDate('year')">
+                de {{ notice.initDate * 1000 | date : "YYYY" }}
+            </span>
+            a
+            {{ notice.endDate * 1000 | date : "dd" }} de
+            {{ notice.endDate * 1000 | date : "MMMM"
+            }}<span *ngIf="!checkDate('')">.</span>
+            <span *ngIf="checkDate('year')">
+                de {{ notice.endDate * 1000 | date : "YYYY" }}</span
+            >
+            <br />
+            através do endereço eletrônico:
+            <a
+                [ngStyle]="{ color: notice.active ? '#A5BC65' : '#D65D5D' }"
+                href="https://portalparnamirimdigital.parnamirim.rn.gov.br/"
+            >
+                https://portalparnamirimdigital.parnamirim.rn.gov.br/
+            </a>
+        </p>
+
+        <p>O edital está disponível para mais informações.</p>
+
+        <div class="buttons">
+            <app-button
+            [disabled]="!notice.active" 
+            [internalRoute]="'editais/' + notice.callYear + '/' + notice.callNumber.toString().padStart(3, '0')"
+            [style]="notice.active ? 'green' : 'disabled'"
+            >INSCRIÇÕES</app-button>
+            <app-button
+                *ngFor="let link of notice.links; let i = index"
+                [noticeInfo]="{ id: notice.id, fileId: i }"
+                [style]="notice.active ? 'green' : 'red'"
+                (click)="toggleLoading()"
+            >
+                {{ link }}
+            </app-button>
+        </div>
+    </div>
+
+    <div class="footer-modal">
+        <p>
+            Dúvidas e/ou esclarecimentos enviar e-mail para:
+            <a
+                [ngStyle]="{ color: notice.active ? '#A5BC65' : '#D65D5D' }"
+                href="mailto: culturadeparnamirim@gmail.com"
+            >
+                culturadeparnamirim@gmail.com
+            </a>
+        </p>
+    </div>
+    <div
+        class="overlay"
+        [ngStyle]="{ display: loading ? 'flex' : 'none' }"
+    ></div>
+    <div
+        class="overlay-info"
+        [ngStyle]="{ display: loading ? 'flex' : 'none' }"
+    >
+        <app-spinner class="message" id="loading"></app-spinner>
+        <p>Baixando arquivo...</p>
+    </div>
+</div>

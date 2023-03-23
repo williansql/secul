@@ -1,0 +1,22 @@
+<div class="content">
+    <h2 class="titlePage">Cadastro de galeria</h2>
+
+    <form [formGroup]="galleryForm" (ngSubmit)="saveEvent()" class="forms">
+        <input formControlName="galleryName" class="galleryName" type="text" placeholder="Nome da galeria" />
+        <div class="columns">
+            <select formControlName="selectedEvent" class="select">
+                <option value="" disabled selected>Evento</option>
+                <option *ngFor="let option of selectOptions" value="{{option.id}}">{{option.name}}</option>
+            </select>
+            <select formControlName="selectedYear" class="select">
+                <option value="" disabled selected>Ano</option>
+                <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+            </select>
+        </div>
+        <app-box-file (fileList)="emitFileList($event)" class="galleryArchives"></app-box-file>
+
+        <div class="buttons">
+            <button type="submit" class="buttonSave" [disabled]="galleryForm.invalid || !hasFiles">cadastrar</button>
+        </div>
+    </form>    
+</div>

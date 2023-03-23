@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap");
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --blue: #07619d;
+    --blue-secondary: #2f528a;
+    --blue-tertiary: #006cb5;
+    --dark-blue: #064671;
+    --red: #eb2d34;
+    --red-secondary: #FD3737;
+    --light-red: #d65d5d;
+    --green: #a5bc65;
+    --green-secondary: #36aa3b;
+    --green-tertiary: #76A485;
+    --light-green: #76a485;
+    --dark-grey: #212121;
+    --grey: #3c3c3c;
+    --grey-secondary: #cccccc;
+    --grey-tertiary: #9B9B9B;
+    --grey-quaternary: #F7F7F7;
+    --grey-quintenary: #606060;
+    --light-grey: #dedede;
+    --grey-background: #999999;
+    --yellow: #fecd20;
+    --yellow-secondary: #feaa00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    --nav-height: max(8vh, 4.25rem);
+    --footer-height: 5vh;
+    --font-content-size: 1.1rem;
+    line-height: 1.5em;
+}
+
+body {
+    margin: var(--nav-height) 0 var(--footer-height) 0;
+}
+
+.content {
+    margin: auto;
+    max-width: 87.5rem;
+    padding: 4.6875rem 4.6875rem;
+    height: calc(100vh - var(--nav-height) - var(--footer-height));
+    font-size: var(--font-content-size);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+strong,
+h1 {
+    color: var(--blue);
+    line-height: 1.1em;
+}
+
+h1,
+h4,
+p {
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+app-button {
+    transition: 0.2s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+@media (max-width: 991.98px) {
+    .content {
+        height: auto;
+        padding: 2rem;
+    }
+    * {
+        --nav-height: 3.25rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    p {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    #skeleton-closeNotices {
+        row-gap: 0.5rem !important;
+        span {
+            height: 22vw !important;
+            width: 90vw !important;
+        }
+    }
+
+    #skeleton-galleries {
+        justify-content: space-around;
+        column-gap: 1rem;
+        span {
+            width: 9.6rem !important;
+            height: 12rem !important;
+        }
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 0.9375rem;
+    }
+}
+
+@media (max-width: 259.98px) {
+    h1 {
+        font-size: 1.25rem;
+    }
+    p {
+        font-size: 0.75rem;
+    }
+}

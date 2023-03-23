@@ -1,0 +1,256 @@
+.content {
+    height: auto;
+    overflow-x: auto;
+
+    &__text {
+        width: 100%;
+    }
+    p {
+        font-size: 1.25rem;
+        max-width: calc(100vw - 4rem);
+    }
+
+    .selection-block,
+    .calendar-block {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.75rem;
+        app-calendar {
+            flex-grow: 1;
+        }
+    }
+
+    .selection-block {
+        width: fit-content;
+        flex-direction: column;
+        gap: 1.75rem;
+        width: 85%;
+    }
+}
+
+.both {
+    display: flex;
+    width: fit-content;
+    gap: 4rem;
+    transition: 1s;
+}
+
+.content-btn {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.content-btn2 {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
+}
+
+.one {
+    width: 80rem;
+    display: flex;
+}
+
+.two {
+    width: 80rem;
+}
+
+.transition-true {
+    transform: translate(-51.1%);
+}
+
+.transition-false {
+    transform: translate(0%);
+}
+
+button {
+    border: 0 solid;
+    cursor: pointer;
+    width: 91.3px;
+    height: 93px;
+    background: #ffffff;
+    border-radius: 16px;
+    user-select: none;
+    filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.25));
+    border: 4px solid var(--white);
+    &:hover {
+        border: 4px solid #36aa3b;
+    }
+
+    &.btn_disabled {
+        &:hover {
+            border: 4px solid var(--white);
+        }
+    }
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+app-legendas {
+    display: block;
+}
+
+app-formulario {
+    width: 100%;
+    background-color: var(--white);
+}
+
+#btn-mobile,
+#btn-desktop {
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 23px;
+    letter-spacing: 0.05em;
+    border-radius: 0.5rem;
+    width: fit-content;
+    height: fit-content;
+    padding: .8rem;
+    color: var(--green-secondary);
+    margin: 2rem 0 0 0;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+#btn-desktop {
+    display: block;
+}
+
+.btn_disabled {
+    cursor: default;
+    img, span {
+        filter: grayscale(1);
+    }
+}
+
+@media (min-width: 1400px) {
+    app-formulario {
+        width: 80.5vw;
+    }
+}
+
+@media (max-width: 1399.98px) {
+    app-formulario {
+        width: 80.5vw;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    app-formulario {
+        width: 77.1vw;
+    }
+}
+
+@media (max-width: 991.98px) {
+    app-formulario {
+        width: 92vw;
+    }
+
+    .content {
+        &__title {
+            font-size: 1rem;
+        }
+    }
+
+    app-legendas {
+        display: none;
+    }
+
+    #btn-mobile {
+        display: block;
+    }
+    #btn-desktop {
+        display: none;
+    }
+
+    .content-btn2 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+    }
+}
+
+@media (max-width: 767.98px) {
+    app-formulario {
+        width: 91vw;
+    }
+
+    .content {
+        overflow-x: hidden;
+        &__title {
+            font-size: 1rem;
+        }
+        &__text {
+            text-align: justify;
+        }
+
+        p {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .content-btn2 {
+        width: 90vw;
+        display: flex;
+        text-align: start;
+    }
+
+    app-formulario {
+        width: 88vw;
+    }
+
+    .content {
+        &__title {
+            font-size: 1rem;
+        }
+        &__text {
+            text-align: justify;
+        }
+
+        p {
+            width: 90vw;
+            display: flex;
+            text-align: initial;
+        }
+    }
+}
+
+@media (max-width: 259.98px) {
+    .content-btn2 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+    }
+
+    app-formulario {
+        width: 77.8vw;
+    }
+
+    #btn-mobile {
+        display: block;
+    }
+    #btn-desktop {
+        display: none;
+    }
+    .content {
+        &__title {
+            font-size: 1rem;
+        }
+        &__text {
+            text-align: initial;
+        }
+
+        p {
+            width: 85vw;
+            display: flex;
+            text-align: initial;
+        }
+    }
+}
